@@ -1,0 +1,16 @@
+export type UIState =
+  | 'default'
+  | 'hover'
+  | 'pressed'
+  | 'focused'
+  | 'disabled'
+  | 'loading'
+  | 'selected'
+  | 'active'
+  | 'inactive'
+  | 'success'
+  | 'pending'
+  | 'error'
+  | 'warning'
+
+export type Size = 'sm' | 'md' | 'lg'
