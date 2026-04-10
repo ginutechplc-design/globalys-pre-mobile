@@ -1,0 +1,189 @@
+{
+  "file_path": "theme_pack/08_theme_usage_rules.json",
+  "content": {
+    "theme_intent": {
+      "summary": [
+        "Project a premium, sober B2B environment through neutral surfaces and restrained brand accents.",
+        "Prioritize operational clarity and transactional trust over decorative aesthetics.",
+        "Ensure high data readability for complex marketplace and dashboard workflows."
+      ]
+    },
+    "color_usage_rules": {
+      "allowed_brand_color_uses": [
+        "Primary call-to-action (CTA) buttons",
+        "Active navigation states",
+        "Key branded icons in headers",
+        "Selection indicators (checkboxes, radio buttons)"
+      ],
+      "forbidden_brand_color_uses": [
+        "Large-scale background fills",
+        "Success, error, or warning status indicators",
+        "Text body copy",
+        "Decorative dividers"
+      ],
+      "semantic_override_rules": [
+        "Semantic tokens always take precedence over brand purple for transactional feedback.",
+        "Never mix brand purple with semantic colors on a single component surface."
+      ]
+    },
+    "brand_purple_discipline": {
+      "max_visual_share": "15% of any screen surface area",
+      "safe_zones": [
+        "Navigation bars",
+        "Primary action areas",
+        "Small identity accents"
+      ],
+      "unsafe_zones": [
+        "Card backgrounds",
+        "Modal backdrops",
+        "List item fills"
+      ]
+    },
+    "semantic_color_usage_rules": {
+      "priority_rules": [
+        "Critical errors must use semantic error red (#BA1A1A).",
+        "Verification and trust states must use semantic verified indigo (#1A237E).",
+        "Awaiting states must use semantic pending cyan (#006064)."
+      ],
+      "status_mapping_rules": [
+        "Green is reserved for financial completion (Paid) and generic Success.",
+        "Teal is reserved for temporal occupation (Booked).",
+        "Orange is reserved for capacity limits (Full) and generic Warnings."
+      ]
+    },
+    "surface_and_background_rules": {
+      "surface_layering": [
+        "Maximum 3 layers of visual depth (Background > Surface > Card/Sheet).",
+        "Use Outline Variant (#CCC4CE) for secondary separation instead of shadow."
+      ],
+      "background_rules": [
+        "Primary background must remain #FEF7FF or #151218 (Dark).",
+        "Never apply brand colors to the root scaffold background."
+      ],
+      "gradient_rules": [
+        "Gradients are strictly forbidden across all UI surfaces.",
+        "All fills must be solid and deterministic."
+      ],
+      "outline_rules": [
+        "All input fields and secondary cards must use a 1dp outline.",
+        "Focus states must use a 2dp primary outline."
+      ]
+    },
+    "elevation_usage_rules": {
+      "when_to_use": [
+        "Temporary overlays (Modals, Menus, Sheets).",
+        "High-priority marketplace cards to provide tactile depth."
+      ],
+      "when_not_to_use": [
+        "Standard list items.",
+        "Dashboard widgets.",
+        "Navigation bars (use outlines instead)."
+      ]
+    },
+    "typography_hierarchy_rules": {
+      "titles": [
+        "Headline Large for root screen titles only.",
+        "Title Large for top app bar titles.",
+        "Title Medium for section groupings."
+      ],
+      "body": [
+        "Body Large for user-generated content and descriptions.",
+        "Body Medium for system labels and input text."
+      ],
+      "metadata": [
+        "Label Small or Body Small for timestamps, counts, and fine print."
+      ],
+      "metrics": [
+        "Display Small for primary KPIs on dashboards using tabular numbers."
+      ]
+    },
+    "shape_and_spacing_rules": {
+      "shape_consistency": [
+        "Buttons and inputs must share corner_sm (8dp).",
+        "Cards must use corner_md (12dp).",
+        "Modal sheets must use corner_xl (28dp) for top edges."
+      ],
+      "spacing_consistency": [
+        "8dp grid (xs=8, md=16, lg=24) must govern all padding and margins.",
+        "16dp (md) is the mandatory screen edge margin."
+      ]
+    },
+    "card_usage_rules": {
+      "stacking": [
+        "Cards may not be nested within other cards.",
+        "Vertical stacking must use 12dp (card_to_card_gap)."
+      ],
+      "density": [
+        "Use 16dp internal padding for standard cards.",
+        "Use 12dp internal padding for dense dashboard widgets."
+      ]
+    },
+    "form_usage_rules": {
+      "readability": [
+        "Labels must be persistent and placed above the field.",
+        "Input text must use body_large for maximum clarity."
+      ],
+      "validation_visibility": [
+        "Errors must be displayed immediately below the field in semantic red.",
+        "Validation icons must accompany all error messages."
+      ]
+    },
+    "booking_and_payment_clarity_rules": {
+      "booking_rules": [
+        "Booking lifecycle states (Booked, Pending, Cancelled) must appear as top-anchored banners on detail screens.",
+        "Use specific icons (Calendar, Clock, X) to distinguish temporal states."
+      ],
+      "payment_rules": [
+        "Amounts must be displayed in bold tabular figures.",
+        "Payment status (Paid, Unpaid, Refunded) must use high-contrast emerald, berry, or lavender containers."
+      ]
+    },
+    "messaging_readability_rules": {
+      "chat_rules": [
+        "User bubbles (Right): Branded purple container.",
+        "Recipient bubbles (Left): Neutral grey surface_container_highest.",
+        "Unread messages must be marked with a 8dp brand purple dot."
+      ]
+    },
+    "dashboard_readability_rules": {
+      "metric_rules": [
+        "Primary metrics must be 1.5x larger than secondary labels.",
+        "Trend indicators (arrows) must use semantic success or error colors."
+      ],
+      "data_density_rules": [
+        "Prioritize tabular layout over card layout for management screens with > 10 items."
+      ]
+    },
+    "accessibility_rules": {
+      "contrast": [
+        "All text must meet WCAG 2.1 AA (4.5:1) against its immediate container.",
+        "Branded elements must ensure white on purple contrast exceeds 4.5:1."
+      ],
+      "status_signaling": [
+        "Color must never be the sole indicator of status (always include icons).",
+        "Focus rings must be high-visibility 2dp primary color."
+      ],
+      "touch_targets": [
+        "Interactive elements must maintain a minimum 48dp x 48dp target area."
+      ]
+    },
+    "dos": [
+      "Use outlines for grouping data-heavy content.",
+      "Apply tabular lining to all financial figures.",
+      "Keep surface tints extremely subtle.",
+      "Include iconography in all status indicators."
+    ],
+    "donts": [
+      "Do not use brand purple for backgrounds.",
+      "Do not use fluid or organic shapes.",
+      "Do not use 3D effects, gloss, or shadows on buttons.",
+      "Do not use more than two font weights on a single card."
+    ],
+    "anti_patterns": [
+      "Purple-on-purple text/background combinations.",
+      "Using red for cancellations that aren't technical failures.",
+      "Omitting labels from icons in navigation or critical actions.",
+      "Using elevation to separate every item in a list."
+    ]
+  }
+}
