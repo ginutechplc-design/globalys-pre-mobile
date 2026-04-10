@@ -1,0 +1,5171 @@
+{
+  "file_path": "theme_pack/07_component_state_matrix.json",
+  "content": {
+    "state_policy": {
+      "global_state_principles": [
+        "States must be visually distinct through a combination of color, icon, and shape change",
+        "Semantic colors must remain consistent across all component families",
+        "Interactive states must provide immediate tactile feedback"
+      ],
+      "color_is_not_only_status_carrier": true,
+      "focus_alignment": [
+        "High-contrast outline ring using the primary color",
+        "2dp stroke width with 4dp exterior padding"
+      ],
+      "motion_alignment": [
+        "Standard ease-in-out transitions (200ms) for surface color changes",
+        "Linear spin for loading indicators"
+      ],
+      "disabled_consistency_rules": [
+        "Opacity reduced to 38% for all elements",
+        "Interaction strictly disabled at the pointer level",
+        "Greyscale conversion of brand-specific hues"
+      ]
+    },
+    "components": {
+      "primary_button": {
+        "supported_states": {
+          "default": {
+            "applicable": true,
+            "visual_changes": [
+              "Full solid container"
+            ],
+            "color_behavior": [
+              "Background: primary",
+              "Text: on_primary"
+            ],
+            "typography_behavior": [
+              "label_large"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "sm, on_primary"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": [
+              "4.5:1 contrast mandatory"
+            ]
+          },
+          "hover": {
+            "applicable": true,
+            "visual_changes": [
+              "Overlay layer 8%"
+            ],
+            "color_behavior": [
+              "Darken primary"
+            ],
+            "typography_behavior": [
+              "label_large"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "sm"
+            ],
+            "motion_intent": [
+              "fade-in"
+            ],
+            "accessibility_notes": [
+              "Visual change on pointer overlap"
+            ]
+          },
+          "pressed": {
+            "applicable": true,
+            "visual_changes": [
+              "Overlay layer 12%"
+            ],
+            "color_behavior": [
+              "Deeper primary tint"
+            ],
+            "typography_behavior": [
+              "label_large"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "sm"
+            ],
+            "motion_intent": [
+              "quick-shrink"
+            ],
+            "accessibility_notes": [
+              "Immediate tactile response"
+            ]
+          },
+          "focused": {
+            "applicable": true,
+            "visual_changes": [
+              "Outline ring"
+            ],
+            "color_behavior": [
+              "primary background"
+            ],
+            "typography_behavior": [
+              "label_large"
+            ],
+            "border_behavior": [
+              "2dp focus_ring"
+            ],
+            "icon_behavior": [
+              "sm"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": [
+              "Keyboard navigation target"
+            ]
+          },
+          "disabled": {
+            "applicable": true,
+            "visual_changes": [
+              "Flat container, 38% opacity"
+            ],
+            "color_behavior": [
+              "Background: on_surface (0.12)",
+              "Text: on_surface (0.38)"
+            ],
+            "typography_behavior": [
+              "label_large"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "sm, 38% opacity"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": [
+              "Announce as disabled button"
+            ]
+          },
+          "loading": {
+            "applicable": true,
+            "visual_changes": [
+              "Text hidden",
+              "Spinner shown"
+            ],
+            "color_behavior": [
+              "primary container"
+            ],
+            "typography_behavior": [
+              "none"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "linear spinner"
+            ],
+            "motion_intent": [
+              "infinite-rotate"
+            ],
+            "accessibility_notes": [
+              "Announce 'Loading' state"
+            ]
+          },
+          "selected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "active": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "inactive": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "success": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "pending": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "error": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "warning": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "unread": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "full": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "booked": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "verified": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "rejected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          }
+        }
+      },
+      "secondary_button": {
+        "supported_states": {
+          "default": {
+            "applicable": true,
+            "visual_changes": [
+              "Outlined container"
+            ],
+            "color_behavior": [
+              "Text: primary",
+              "Border: outline"
+            ],
+            "typography_behavior": [
+              "label_large"
+            ],
+            "border_behavior": [
+              "thin outline"
+            ],
+            "icon_behavior": [
+              "sm, primary"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": [
+              "Border must be visible on surface"
+            ]
+          },
+          "hover": {
+            "applicable": true,
+            "visual_changes": [
+              "Background 8% primary"
+            ],
+            "color_behavior": [
+              "primary text"
+            ],
+            "typography_behavior": [
+              "label_large"
+            ],
+            "border_behavior": [
+              "thin primary"
+            ],
+            "icon_behavior": [
+              "sm"
+            ],
+            "motion_intent": [
+              "fade"
+            ],
+            "accessibility_notes": []
+          },
+          "pressed": {
+            "applicable": true,
+            "visual_changes": [
+              "Background 12% primary"
+            ],
+            "color_behavior": [
+              "primary text"
+            ],
+            "typography_behavior": [
+              "label_large"
+            ],
+            "border_behavior": [
+              "thin primary"
+            ],
+            "icon_behavior": [
+              "sm"
+            ],
+            "motion_intent": [
+              "shrink"
+            ],
+            "accessibility_notes": []
+          },
+          "focused": {
+            "applicable": true,
+            "visual_changes": [
+              "Focus ring offset"
+            ],
+            "color_behavior": [
+              "primary text"
+            ],
+            "typography_behavior": [
+              "label_large"
+            ],
+            "border_behavior": [
+              "2dp primary"
+            ],
+            "icon_behavior": [
+              "sm"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "disabled": {
+            "applicable": true,
+            "visual_changes": [
+              "Greyed out text and border"
+            ],
+            "color_behavior": [
+              "Text: on_surface (0.38)",
+              "Border: on_surface (0.12)"
+            ],
+            "typography_behavior": [
+              "label_large"
+            ],
+            "border_behavior": [
+              "thin on_surface (0.12)"
+            ],
+            "icon_behavior": [
+              "sm, 38% opacity"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "loading": {
+            "applicable": true,
+            "visual_changes": [
+              "Spinner replaced text"
+            ],
+            "color_behavior": [
+              "primary spinner"
+            ],
+            "typography_behavior": [
+              "none"
+            ],
+            "border_behavior": [
+              "thin primary"
+            ],
+            "icon_behavior": [
+              "circular spinner"
+            ],
+            "motion_intent": [
+              "rotate"
+            ],
+            "accessibility_notes": []
+          },
+          "selected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "active": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "inactive": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "success": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "pending": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "error": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "warning": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "unread": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "full": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "booked": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "verified": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "rejected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          }
+        }
+      },
+      "text_field": {
+        "supported_states": {
+          "default": {
+            "applicable": true,
+            "visual_changes": [
+              "Outlined input"
+            ],
+            "color_behavior": [
+              "Background: surface_container_low",
+              "Label: on_surface_variant"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "thin outline"
+            ],
+            "icon_behavior": [
+              "sm, outline"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": [
+              "Placeholder contrast > 3:1"
+            ]
+          },
+          "hover": {
+            "applicable": true,
+            "visual_changes": [
+              "Darker border"
+            ],
+            "color_behavior": [
+              "Border: on_surface"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "thin on_surface"
+            ],
+            "icon_behavior": [
+              "sm"
+            ],
+            "motion_intent": [
+              "fade"
+            ],
+            "accessibility_notes": []
+          },
+          "pressed": {
+            "applicable": true,
+            "visual_changes": [
+              "Focus state trigger"
+            ],
+            "color_behavior": [
+              "primary border"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "strong primary"
+            ],
+            "icon_behavior": [
+              "sm"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "focused": {
+            "applicable": true,
+            "visual_changes": [
+              "Floating label",
+              "Thick border"
+            ],
+            "color_behavior": [
+              "Border: primary",
+              "Label: primary"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "strong primary"
+            ],
+            "icon_behavior": [
+              "sm, primary"
+            ],
+            "motion_intent": [
+              "label-slide-up"
+            ],
+            "accessibility_notes": [
+              "Announce edit mode"
+            ]
+          },
+          "disabled": {
+            "applicable": true,
+            "visual_changes": [
+              "Greyed background",
+              "38% text"
+            ],
+            "color_behavior": [
+              "Background: on_surface (0.04)",
+              "Text: on_surface (0.38)"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "thin on_surface (0.12)"
+            ],
+            "icon_behavior": [
+              "sm, 38%"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "loading": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "selected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "active": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "inactive": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "success": {
+            "applicable": true,
+            "visual_changes": [
+              "Green border",
+              "Check icon"
+            ],
+            "color_behavior": [
+              "Border: success",
+              "Text: on_surface"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "thin success"
+            ],
+            "icon_behavior": [
+              "sm, success"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "pending": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "error": {
+            "applicable": true,
+            "visual_changes": [
+              "Red border",
+              "Error icon"
+            ],
+            "color_behavior": [
+              "Border: error",
+              "Label: error",
+              "Helper text: error"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "strong error"
+            ],
+            "icon_behavior": [
+              "sm, error"
+            ],
+            "motion_intent": [
+              "shake"
+            ],
+            "accessibility_notes": [
+              "Announce validation error"
+            ]
+          },
+          "warning": {
+            "applicable": true,
+            "visual_changes": [
+              "Amber border"
+            ],
+            "color_behavior": [
+              "Border: warning"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "thin warning"
+            ],
+            "icon_behavior": [
+              "sm, warning"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "unread": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "full": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "booked": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "verified": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "rejected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          }
+        }
+      },
+      "search_field": {
+        "supported_states": {
+          "default": {
+            "applicable": true,
+            "visual_changes": [
+              "Rounded capsule container"
+            ],
+            "color_behavior": [
+              "Background: surface_container_high"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "md, on_surface_variant"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "hover": {
+            "applicable": true,
+            "visual_changes": [
+              "Lighter background tint"
+            ],
+            "color_behavior": [
+              "surface_container_highest"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "md"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "pressed": {
+            "applicable": true,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "focused": {
+            "applicable": true,
+            "visual_changes": [
+              "Primary outline"
+            ],
+            "color_behavior": [
+              "Background: surface"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "strong primary"
+            ],
+            "icon_behavior": [
+              "md, primary"
+            ],
+            "motion_intent": [
+              "expand"
+            ],
+            "accessibility_notes": []
+          },
+          "disabled": {
+            "applicable": true,
+            "visual_changes": [
+              "38% opacity"
+            ],
+            "color_behavior": [
+              "surface_container"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "md, 38%"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "loading": {
+            "applicable": true,
+            "visual_changes": [
+              "Trailing spinner"
+            ],
+            "color_behavior": [
+              "primary spinner"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "sm spinner"
+            ],
+            "motion_intent": [
+              "rotate"
+            ],
+            "accessibility_notes": []
+          },
+          "selected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "active": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "inactive": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "success": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "pending": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "error": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "warning": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "unread": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "full": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "booked": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "verified": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "rejected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          }
+        }
+      },
+      "filter_chip": {
+        "supported_states": {
+          "default": {
+            "applicable": true,
+            "visual_changes": [
+              "Outlined sm corner"
+            ],
+            "color_behavior": [
+              "Background: surface",
+              "Text: on_surface"
+            ],
+            "typography_behavior": [
+              "label_large"
+            ],
+            "border_behavior": [
+              "thin outline"
+            ],
+            "icon_behavior": [
+              "sm, outline"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "hover": {
+            "applicable": true,
+            "visual_changes": [
+              "Surface tint"
+            ],
+            "color_behavior": [
+              "on_surface (0.08) overlay"
+            ],
+            "typography_behavior": [
+              "label_large"
+            ],
+            "border_behavior": [
+              "thin outline"
+            ],
+            "icon_behavior": [
+              "sm"
+            ],
+            "motion_intent": [
+              "fade"
+            ],
+            "accessibility_notes": []
+          },
+          "pressed": {
+            "applicable": true,
+            "visual_changes": [
+              "Surface tint deeper"
+            ],
+            "color_behavior": [
+              "on_surface (0.12) overlay"
+            ],
+            "typography_behavior": [
+              "label_large"
+            ],
+            "border_behavior": [
+              "thin outline"
+            ],
+            "icon_behavior": [
+              "sm"
+            ],
+            "motion_intent": [
+              "shrink"
+            ],
+            "accessibility_notes": []
+          },
+          "focused": {
+            "applicable": true,
+            "visual_changes": [
+              "Focus ring"
+            ],
+            "color_behavior": [
+              "surface"
+            ],
+            "typography_behavior": [
+              "label_large"
+            ],
+            "border_behavior": [
+              "2dp primary"
+            ],
+            "icon_behavior": [
+              "sm"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "disabled": {
+            "applicable": true,
+            "visual_changes": [
+              "38% opacity"
+            ],
+            "color_behavior": [
+              "on_surface (0.12)"
+            ],
+            "typography_behavior": [
+              "label_large"
+            ],
+            "border_behavior": [
+              "thin on_surface (0.12)"
+            ],
+            "icon_behavior": [
+              "sm, 38%"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "loading": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "selected": {
+            "applicable": true,
+            "visual_changes": [
+              "Filled background",
+              "Leading checkmark"
+            ],
+            "color_behavior": [
+              "Background: primary",
+              "Text: on_primary"
+            ],
+            "typography_behavior": [
+              "label_large"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "sm, on_primary"
+            ],
+            "motion_intent": [
+              "scale-in-icon"
+            ],
+            "accessibility_notes": [
+              "Announce as selected"
+            ]
+          },
+          "active": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "inactive": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "success": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "pending": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "error": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "warning": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "unread": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "full": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "booked": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "verified": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "rejected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          }
+        }
+      },
+      "service_card": {
+        "supported_states": {
+          "default": {
+            "applicable": true,
+            "visual_changes": [
+              "Elevated container md corner"
+            ],
+            "color_behavior": [
+              "Background: surface"
+            ],
+            "typography_behavior": [
+              "headline_small"
+            ],
+            "border_behavior": [
+              "thin outline_variant"
+            ],
+            "icon_behavior": [
+              "sm"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "hover": {
+            "applicable": true,
+            "visual_changes": [
+              "Elevation level2",
+              "Shadow darken"
+            ],
+            "color_behavior": [
+              "surface"
+            ],
+            "typography_behavior": [
+              "headline_small"
+            ],
+            "border_behavior": [
+              "thin outline"
+            ],
+            "icon_behavior": [
+              "sm"
+            ],
+            "motion_intent": [
+              "lift"
+            ],
+            "accessibility_notes": []
+          },
+          "pressed": {
+            "applicable": true,
+            "visual_changes": [
+              "Elevation level0",
+              "Scale 98%"
+            ],
+            "color_behavior": [
+              "surface_container_high"
+            ],
+            "typography_behavior": [
+              "headline_small"
+            ],
+            "border_behavior": [
+              "thin primary"
+            ],
+            "icon_behavior": [
+              "sm"
+            ],
+            "motion_intent": [
+              "shrink-pop"
+            ],
+            "accessibility_notes": []
+          },
+          "focused": {
+            "applicable": true,
+            "visual_changes": [
+              "External focus ring"
+            ],
+            "color_behavior": [
+              "surface"
+            ],
+            "typography_behavior": [
+              "headline_small"
+            ],
+            "border_behavior": [
+              "2dp primary"
+            ],
+            "icon_behavior": [
+              "sm"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "disabled": {
+            "applicable": true,
+            "visual_changes": [
+              "38% opacity",
+              "No shadow"
+            ],
+            "color_behavior": [
+              "surface_container_low"
+            ],
+            "typography_behavior": [
+              "headline_small"
+            ],
+            "border_behavior": [
+              "thin outline_variant"
+            ],
+            "icon_behavior": [
+              "sm, 38%"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "loading": {
+            "applicable": true,
+            "visual_changes": [
+              "Shimmer overlay"
+            ],
+            "color_behavior": [
+              "surface_container"
+            ],
+            "typography_behavior": [
+              "none"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "none"
+            ],
+            "motion_intent": [
+              "shimmer-wave"
+            ],
+            "accessibility_notes": [
+              "Announce 'Loading service'"
+            ]
+          },
+          "selected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "active": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "inactive": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "success": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "pending": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "error": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "warning": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "unread": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "full": {
+            "applicable": true,
+            "visual_changes": [
+              "Grayscale filter on image",
+              "Full badge overlay"
+            ],
+            "color_behavior": [
+              "full_container status"
+            ],
+            "typography_behavior": [
+              "label_medium"
+            ],
+            "border_behavior": [
+              "thin outline_variant"
+            ],
+            "icon_behavior": [
+              "xs"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": [
+              "Announce as fully booked"
+            ]
+          },
+          "booked": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "verified": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "rejected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          }
+        }
+      },
+      "provider_card": {
+        "supported_states": {
+          "default": {
+            "applicable": true,
+            "visual_changes": [
+              "Flat container with md corner"
+            ],
+            "color_behavior": [
+              "Background: surface"
+            ],
+            "typography_behavior": [
+              "title_medium"
+            ],
+            "border_behavior": [
+              "thin outline_variant"
+            ],
+            "icon_behavior": [
+              "sm"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "hover": {
+            "applicable": true,
+            "visual_changes": [
+              "Outline primary"
+            ],
+            "color_behavior": [
+              "surface"
+            ],
+            "typography_behavior": [
+              "title_medium"
+            ],
+            "border_behavior": [
+              "thin primary"
+            ],
+            "icon_behavior": [
+              "sm"
+            ],
+            "motion_intent": [
+              "fade"
+            ],
+            "accessibility_notes": []
+          },
+          "pressed": {
+            "applicable": true,
+            "visual_changes": [
+              "Background overlay 12% primary"
+            ],
+            "color_behavior": [
+              "surface"
+            ],
+            "typography_behavior": [
+              "title_medium"
+            ],
+            "border_behavior": [
+              "thin primary"
+            ],
+            "icon_behavior": [
+              "sm"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "focused": {
+            "applicable": true,
+            "visual_changes": [
+              "Focus ring offset"
+            ],
+            "color_behavior": [
+              "surface"
+            ],
+            "typography_behavior": [
+              "title_medium"
+            ],
+            "border_behavior": [
+              "2dp primary"
+            ],
+            "icon_behavior": [
+              "sm"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "disabled": {
+            "applicable": true,
+            "visual_changes": [
+              "38% opacity"
+            ],
+            "color_behavior": [
+              "surface"
+            ],
+            "typography_behavior": [
+              "title_medium"
+            ],
+            "border_behavior": [
+              "thin outline_variant"
+            ],
+            "icon_behavior": [
+              "sm, 38%"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "loading": {
+            "applicable": true,
+            "visual_changes": [
+              "Shimmer avatar and title lines"
+            ],
+            "color_behavior": [
+              "surface_container"
+            ],
+            "typography_behavior": [
+              "none"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "none"
+            ],
+            "motion_intent": [
+              "shimmer-wave"
+            ],
+            "accessibility_notes": []
+          },
+          "selected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "active": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "inactive": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "success": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "pending": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "error": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "warning": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "unread": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "full": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "booked": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "verified": {
+            "applicable": true,
+            "visual_changes": [
+              "Leading check icon",
+              "Trust badge overlay"
+            ],
+            "color_behavior": [
+              "verified_container"
+            ],
+            "typography_behavior": [
+              "title_medium"
+            ],
+            "border_behavior": [
+              "thin verified_border"
+            ],
+            "icon_behavior": [
+              "sm, verified icon"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": [
+              "Announce as verified provider"
+            ]
+          },
+          "rejected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          }
+        }
+      },
+      "availability_slot_card": {
+        "supported_states": {
+          "default": {
+            "applicable": true,
+            "visual_changes": [
+              "Outlined box"
+            ],
+            "color_behavior": [
+              "Background: surface",
+              "Text: on_surface"
+            ],
+            "typography_behavior": [
+              "title_small"
+            ],
+            "border_behavior": [
+              "thin outline"
+            ],
+            "icon_behavior": [
+              "none"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "hover": {
+            "applicable": true,
+            "visual_changes": [
+              "Overlay 8%"
+            ],
+            "color_behavior": [
+              "on_surface"
+            ],
+            "typography_behavior": [
+              "title_small"
+            ],
+            "border_behavior": [
+              "thin primary"
+            ],
+            "icon_behavior": [
+              "none"
+            ],
+            "motion_intent": [
+              "fade"
+            ],
+            "accessibility_notes": []
+          },
+          "pressed": {
+            "applicable": true,
+            "visual_changes": [
+              "Shrink"
+            ],
+            "color_behavior": [
+              "surface_container_high"
+            ],
+            "typography_behavior": [
+              "title_small"
+            ],
+            "border_behavior": [
+              "thin primary"
+            ],
+            "icon_behavior": [
+              "none"
+            ],
+            "motion_intent": [
+              "shrink"
+            ],
+            "accessibility_notes": []
+          },
+          "focused": {
+            "applicable": true,
+            "visual_changes": [
+              "Focus ring"
+            ],
+            "color_behavior": [
+              "surface"
+            ],
+            "typography_behavior": [
+              "title_small"
+            ],
+            "border_behavior": [
+              "2dp primary"
+            ],
+            "icon_behavior": [
+              "none"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "disabled": {
+            "applicable": true,
+            "visual_changes": [
+              "Strike-through text",
+              "Grey background"
+            ],
+            "color_behavior": [
+              "Background: surface_container",
+              "Text: on_surface (0.38)"
+            ],
+            "typography_behavior": [
+              "title_small"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "none"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": [
+              "Announce as unavailable slot"
+            ]
+          },
+          "loading": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "selected": {
+            "applicable": true,
+            "visual_changes": [
+              "Solid background",
+              "Check icon"
+            ],
+            "color_behavior": [
+              "Background: primary",
+              "Text: on_primary"
+            ],
+            "typography_behavior": [
+              "title_small"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "sm, on_primary"
+            ],
+            "motion_intent": [
+              "scale-in"
+            ],
+            "accessibility_notes": [
+              "Announce as selected time"
+            ]
+          },
+          "active": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "inactive": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "success": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "pending": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "error": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "warning": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "unread": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "full": {
+            "applicable": true,
+            "visual_changes": [
+              "Opacity reduction",
+              "Label 'Full'"
+            ],
+            "color_behavior": [
+              "full_container"
+            ],
+            "typography_behavior": [
+              "label_small"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "none"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "booked": {
+            "applicable": true,
+            "visual_changes": [
+              "Fill teal",
+              "Label 'Booked'"
+            ],
+            "color_behavior": [
+              "booked_container",
+              "Text: on_booked_container"
+            ],
+            "typography_behavior": [
+              "label_small"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "sm, booked icon"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "verified": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "rejected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          }
+        }
+      },
+      "booking_summary_card": {
+        "supported_states": {
+          "default": {
+            "applicable": true,
+            "visual_changes": [
+              "Flat md corner container"
+            ],
+            "color_behavior": [
+              "Background: surface_container_low"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "thin outline_variant"
+            ],
+            "icon_behavior": [
+              "sm"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "hover": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "pressed": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "focused": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "disabled": {
+            "applicable": true,
+            "visual_changes": [
+              "38% opacity"
+            ],
+            "color_behavior": [
+              "surface_container_low"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "sm"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "loading": {
+            "applicable": true,
+            "visual_changes": [
+              "Shimmer effect"
+            ],
+            "color_behavior": [
+              "surface_container"
+            ],
+            "typography_behavior": [
+              "none"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "none"
+            ],
+            "motion_intent": [
+              "shimmer-wave"
+            ],
+            "accessibility_notes": []
+          },
+          "selected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "active": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "inactive": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "success": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "pending": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "error": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "warning": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "unread": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "full": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "booked": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "verified": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "rejected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          }
+        }
+      },
+      "booking_status_block": {
+        "supported_states": {
+          "default": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "hover": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "pressed": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "focused": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "disabled": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "loading": {
+            "applicable": true,
+            "visual_changes": [
+              "Spinner replace icon"
+            ],
+            "color_behavior": [
+              "primary container"
+            ],
+            "typography_behavior": [
+              "title_medium"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "circular spinner"
+            ],
+            "motion_intent": [
+              "rotate"
+            ],
+            "accessibility_notes": []
+          },
+          "selected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "active": {
+            "applicable": true,
+            "visual_changes": [
+              "Branded purple banner"
+            ],
+            "color_behavior": [
+              "primary_container",
+              "on_primary_container text"
+            ],
+            "typography_behavior": [
+              "title_medium"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "md, primary"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": [
+              "Announce as active booking"
+            ]
+          },
+          "inactive": {
+            "applicable": true,
+            "visual_changes": [
+              "Grey banner"
+            ],
+            "color_behavior": [
+              "surface_container_highest"
+            ],
+            "typography_behavior": [
+              "title_medium"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "md, outline"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "success": {
+            "applicable": true,
+            "visual_changes": [
+              "Green banner"
+            ],
+            "color_behavior": [
+              "success_container",
+              "on_success_container text"
+            ],
+            "typography_behavior": [
+              "title_medium"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "md, success"
+            ],
+            "motion_intent": [
+              "pop-in-icon"
+            ],
+            "accessibility_notes": []
+          },
+          "pending": {
+            "applicable": true,
+            "visual_changes": [
+              "Cyan banner"
+            ],
+            "color_behavior": [
+              "pending_container",
+              "on_pending_container text"
+            ],
+            "typography_behavior": [
+              "title_medium"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "md, pending icon"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "error": {
+            "applicable": true,
+            "visual_changes": [
+              "Red banner"
+            ],
+            "color_behavior": [
+              "error_container",
+              "on_error_container text"
+            ],
+            "typography_behavior": [
+              "title_medium"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "md, error icon"
+            ],
+            "motion_intent": [
+              "shake"
+            ],
+            "accessibility_notes": []
+          },
+          "warning": {
+            "applicable": true,
+            "visual_changes": [
+              "Amber banner"
+            ],
+            "color_behavior": [
+              "warning_container",
+              "on_warning_container text"
+            ],
+            "typography_behavior": [
+              "title_medium"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "md, warning icon"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "unread": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "full": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "booked": {
+            "applicable": true,
+            "visual_changes": [
+              "Teal banner"
+            ],
+            "color_behavior": [
+              "booked_container",
+              "on_booked_container text"
+            ],
+            "typography_behavior": [
+              "title_medium"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "md, booked icon"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "verified": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "rejected": {
+            "applicable": true,
+            "visual_changes": [
+              "Red block"
+            ],
+            "color_behavior": [
+              "rejected_container",
+              "on_rejected_container text"
+            ],
+            "typography_behavior": [
+              "title_medium"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "md, rejected icon"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          }
+        }
+      },
+      "payment_status_banner": {
+        "supported_states": {
+          "default": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "hover": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "pressed": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "focused": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "disabled": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "loading": {
+            "applicable": true,
+            "visual_changes": [
+              "Pulsing background"
+            ],
+            "color_behavior": [
+              "surface_container"
+            ],
+            "typography_behavior": [
+              "title_medium"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "linear loader"
+            ],
+            "motion_intent": [
+              "pulse"
+            ],
+            "accessibility_notes": []
+          },
+          "selected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "active": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "inactive": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "success": {
+            "applicable": true,
+            "visual_changes": [
+              "Full emerald banner"
+            ],
+            "color_behavior": [
+              "paid_container",
+              "on_paid_container text"
+            ],
+            "typography_behavior": [
+              "headline_small"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "lg, paid icon"
+            ],
+            "motion_intent": [
+              "slide-down"
+            ],
+            "accessibility_notes": [
+              "Announce payment success"
+            ]
+          },
+          "pending": {
+            "applicable": true,
+            "visual_changes": [
+              "Cyan banner"
+            ],
+            "color_behavior": [
+              "pending_container",
+              "on_pending_container text"
+            ],
+            "typography_behavior": [
+              "headline_small"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "lg, pending icon"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "error": {
+            "applicable": true,
+            "visual_changes": [
+              "Full red banner"
+            ],
+            "color_behavior": [
+              "failed_container",
+              "on_failed_container text"
+            ],
+            "typography_behavior": [
+              "headline_small"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "lg, failed icon"
+            ],
+            "motion_intent": [
+              "shake"
+            ],
+            "accessibility_notes": [
+              "Announce payment failure"
+            ]
+          },
+          "warning": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "unread": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "full": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "booked": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "verified": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "rejected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          }
+        }
+      },
+      "thread_list_item": {
+        "supported_states": {
+          "default": {
+            "applicable": true,
+            "visual_changes": [
+              "Flat list item"
+            ],
+            "color_behavior": [
+              "surface"
+            ],
+            "typography_behavior": [
+              "title_medium"
+            ],
+            "border_behavior": [
+              "hairline outline_variant bottom"
+            ],
+            "icon_behavior": [
+              "md avatar"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "hover": {
+            "applicable": true,
+            "visual_changes": [
+              "Background overlay 8%"
+            ],
+            "color_behavior": [
+              "surface"
+            ],
+            "typography_behavior": [
+              "title_medium"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "md"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "pressed": {
+            "applicable": true,
+            "visual_changes": [
+              "Overlay 12%"
+            ],
+            "color_behavior": [
+              "surface"
+            ],
+            "typography_behavior": [
+              "title_medium"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "md"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "focused": {
+            "applicable": true,
+            "visual_changes": [
+              "Internal focus border"
+            ],
+            "color_behavior": [
+              "surface"
+            ],
+            "typography_behavior": [
+              "title_medium"
+            ],
+            "border_behavior": [
+              "2dp primary"
+            ],
+            "icon_behavior": [
+              "md"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "disabled": {
+            "applicable": true,
+            "visual_changes": [
+              "38% opacity"
+            ],
+            "color_behavior": [
+              "surface"
+            ],
+            "typography_behavior": [
+              "title_medium"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "md"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "loading": {
+            "applicable": true,
+            "visual_changes": [
+              "Shimmer"
+            ],
+            "color_behavior": [
+              "surface_container"
+            ],
+            "typography_behavior": [
+              "none"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "none"
+            ],
+            "motion_intent": [
+              "shimmer"
+            ],
+            "accessibility_notes": []
+          },
+          "selected": {
+            "applicable": true,
+            "visual_changes": [
+              "Background 10% primary"
+            ],
+            "color_behavior": [
+              "surface"
+            ],
+            "typography_behavior": [
+              "title_medium bold"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "md"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "active": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "inactive": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "success": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "pending": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "error": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "warning": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "unread": {
+            "applicable": true,
+            "visual_changes": [
+              "Primary signature dot",
+              "Bold title"
+            ],
+            "color_behavior": [
+              "unread text color primary"
+            ],
+            "typography_behavior": [
+              "title_medium bold"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "sm unread_dot"
+            ],
+            "motion_intent": [
+              "pop-in-dot"
+            ],
+            "accessibility_notes": [
+              "Announce 'X unread messages'"
+            ]
+          },
+          "full": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "booked": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "verified": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "rejected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          }
+        }
+      },
+      "message_bubble_mine": {
+        "supported_states": {
+          "default": {
+            "applicable": true,
+            "visual_changes": [
+              "Primary container",
+              "Top-right sharp corner"
+            ],
+            "color_behavior": [
+              "Background: primary",
+              "Text: on_primary"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "none"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "hover": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "pressed": {
+            "applicable": true,
+            "visual_changes": [
+              "Slight darken tint"
+            ],
+            "color_behavior": [
+              "primary"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "none"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "focused": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "disabled": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "loading": {
+            "applicable": true,
+            "visual_changes": [
+              "Lower opacity 60%"
+            ],
+            "color_behavior": [
+              "primary"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "sm spinner trailing"
+            ],
+            "motion_intent": [
+              "fade"
+            ],
+            "accessibility_notes": [
+              "Announce sending"
+            ]
+          },
+          "selected": {
+            "applicable": true,
+            "visual_changes": [
+              "Check overlay"
+            ],
+            "color_behavior": [
+              "primary_container"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "sm select"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "active": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "inactive": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "success": {
+            "applicable": true,
+            "visual_changes": [
+              "Checkmark double icon"
+            ],
+            "color_behavior": [
+              "primary icon"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "xs sent_icon"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": [
+              "Announce message read"
+            ]
+          },
+          "pending": {
+            "applicable": true,
+            "visual_changes": [
+              "Single check icon"
+            ],
+            "color_behavior": [
+              "on_primary"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "xs sent_icon"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": [
+              "Announce message sent"
+            ]
+          },
+          "error": {
+            "applicable": true,
+            "visual_changes": [
+              "Error icon trailing red"
+            ],
+            "color_behavior": [
+              "primary"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "sm error_icon"
+            ],
+            "motion_intent": [
+              "shake"
+            ],
+            "accessibility_notes": [
+              "Announce message failed"
+            ]
+          },
+          "warning": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "unread": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "full": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "booked": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "verified": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "rejected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          }
+        }
+      },
+      "message_bubble_theirs": {
+        "supported_states": {
+          "default": {
+            "applicable": true,
+            "visual_changes": [
+              "Grey container",
+              "Top-left sharp corner"
+            ],
+            "color_behavior": [
+              "Background: surface_container_highest",
+              "Text: on_surface"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "none"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "hover": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "pressed": {
+            "applicable": true,
+            "visual_changes": [
+              "Slight darken"
+            ],
+            "color_behavior": [
+              "on_surface"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "none"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "focused": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "disabled": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "loading": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "selected": {
+            "applicable": true,
+            "visual_changes": [
+              "Check overlay"
+            ],
+            "color_behavior": [
+              "surface_container_highest"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "sm"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "active": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "inactive": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "success": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "pending": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "error": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "warning": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "unread": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "full": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "booked": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "verified": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "rejected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          }
+        }
+      },
+      "upload_document_card": {
+        "supported_states": {
+          "default": {
+            "applicable": true,
+            "visual_changes": [
+              "Dashed outline container"
+            ],
+            "color_behavior": [
+              "Background: surface",
+              "Border: outline"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "thin dash outline"
+            ],
+            "icon_behavior": [
+              "lg, outline"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "hover": {
+            "applicable": true,
+            "visual_changes": [
+              "Background primary 8%"
+            ],
+            "color_behavior": [
+              "primary tint"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "thin dash primary"
+            ],
+            "icon_behavior": [
+              "lg"
+            ],
+            "motion_intent": [
+              "fade"
+            ],
+            "accessibility_notes": []
+          },
+          "pressed": {
+            "applicable": true,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "focused": {
+            "applicable": true,
+            "visual_changes": [
+              "Focus ring external"
+            ],
+            "color_behavior": [
+              "surface"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "2dp primary"
+            ],
+            "icon_behavior": [
+              "lg"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "disabled": {
+            "applicable": true,
+            "visual_changes": [
+              "38% opacity"
+            ],
+            "color_behavior": [
+              "surface_container"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "thin grey"
+            ],
+            "icon_behavior": [
+              "lg"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "loading": {
+            "applicable": true,
+            "visual_changes": [
+              "Progress bar linear",
+              "Percentage text"
+            ],
+            "color_behavior": [
+              "primary progress"
+            ],
+            "typography_behavior": [
+              "body_small"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "none"
+            ],
+            "motion_intent": [
+              "linear progress fill"
+            ],
+            "accessibility_notes": [
+              "Announce upload progress"
+            ]
+          },
+          "selected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "active": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "inactive": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "success": {
+            "applicable": true,
+            "visual_changes": [
+              "Green check overlay",
+              "Filename display"
+            ],
+            "color_behavior": [
+              "success text"
+            ],
+            "typography_behavior": [
+              "body_medium"
+            ],
+            "border_behavior": [
+              "thin success"
+            ],
+            "icon_behavior": [
+              "md check"
+            ],
+            "motion_intent": [
+              "pop"
+            ],
+            "accessibility_notes": [
+              "Announce upload complete"
+            ]
+          },
+          "pending": {
+            "applicable": true,
+            "visual_changes": [
+              "Cyan status label"
+            ],
+            "color_behavior": [
+              "pending_container"
+            ],
+            "typography_behavior": [
+              "body_medium"
+            ],
+            "border_behavior": [
+              "thin pending"
+            ],
+            "icon_behavior": [
+              "md watch"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "error": {
+            "applicable": true,
+            "visual_changes": [
+              "Red dash",
+              "Retry button"
+            ],
+            "color_behavior": [
+              "error text"
+            ],
+            "typography_behavior": [
+              "body_medium"
+            ],
+            "border_behavior": [
+              "strong error"
+            ],
+            "icon_behavior": [
+              "md alert"
+            ],
+            "motion_intent": [
+              "shake"
+            ],
+            "accessibility_notes": [
+              "Announce upload failure"
+            ]
+          },
+          "warning": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "unread": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "full": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "booked": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "verified": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "rejected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          }
+        }
+      },
+      "verification_status_banner": {
+        "supported_states": {
+          "default": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "hover": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "pressed": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "focused": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "disabled": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "loading": {
+            "applicable": true,
+            "visual_changes": [
+              "Pulsing cyan"
+            ],
+            "color_behavior": [
+              "pending_container"
+            ],
+            "typography_behavior": [
+              "title_small"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "spinner sm"
+            ],
+            "motion_intent": [
+              "pulse"
+            ],
+            "accessibility_notes": []
+          },
+          "selected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "active": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "inactive": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "success": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "pending": {
+            "applicable": true,
+            "visual_changes": [
+              "Cyan status block"
+            ],
+            "color_behavior": [
+              "pending_container"
+            ],
+            "typography_behavior": [
+              "title_small"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "sm watch icon"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": [
+              "Announce verification in progress"
+            ]
+          },
+          "error": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "warning": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "unread": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "full": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "booked": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "verified": {
+            "applicable": true,
+            "visual_changes": [
+              "Indigo status block",
+              "Shield icon"
+            ],
+            "color_behavior": [
+              "verified_container"
+            ],
+            "typography_behavior": [
+              "title_small"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "sm shield check"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": [
+              "Announce profile verified"
+            ]
+          },
+          "rejected": {
+            "applicable": true,
+            "visual_changes": [
+              "Red status block",
+              "Exclamation icon"
+            ],
+            "color_behavior": [
+              "rejected_container"
+            ],
+            "typography_behavior": [
+              "title_small"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "sm alert"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": [
+              "Announce verification failed"
+            ]
+          }
+        }
+      },
+      "metric_card": {
+        "supported_states": {
+          "default": {
+            "applicable": true,
+            "visual_changes": [
+              "Flat container with bold metric"
+            ],
+            "color_behavior": [
+              "Background: surface",
+              "Value: primary"
+            ],
+            "typography_behavior": [
+              "display_small"
+            ],
+            "border_behavior": [
+              "thin outline_variant"
+            ],
+            "icon_behavior": [
+              "none"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "hover": {
+            "applicable": true,
+            "visual_changes": [
+              "Elevation level1"
+            ],
+            "color_behavior": [
+              "surface"
+            ],
+            "typography_behavior": [
+              "display_small"
+            ],
+            "border_behavior": [
+              "thin outline"
+            ],
+            "icon_behavior": [
+              "none"
+            ],
+            "motion_intent": [
+              "lift"
+            ],
+            "accessibility_notes": []
+          },
+          "pressed": {
+            "applicable": true,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "focused": {
+            "applicable": true,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "disabled": {
+            "applicable": true,
+            "visual_changes": [
+              "38% opacity"
+            ],
+            "color_behavior": [
+              "on_surface"
+            ],
+            "typography_behavior": [
+              "display_small"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "none"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "loading": {
+            "applicable": true,
+            "visual_changes": [
+              "Shimmer value block"
+            ],
+            "color_behavior": [
+              "surface_container"
+            ],
+            "typography_behavior": [
+              "none"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "none"
+            ],
+            "motion_intent": [
+              "shimmer"
+            ],
+            "accessibility_notes": []
+          },
+          "selected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "active": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "inactive": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "success": {
+            "applicable": true,
+            "visual_changes": [
+              "Positive trend green indicator"
+            ],
+            "color_behavior": [
+              "success text for trend"
+            ],
+            "typography_behavior": [
+              "label_small"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "xs arrow_up"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "pending": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "error": {
+            "applicable": true,
+            "visual_changes": [
+              "Negative trend red indicator"
+            ],
+            "color_behavior": [
+              "error text for trend"
+            ],
+            "typography_behavior": [
+              "label_small"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "xs arrow_down"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "warning": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "unread": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "full": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "booked": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "verified": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "rejected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          }
+        }
+      },
+      "empty_state_block": {
+        "supported_states": {
+          "default": {
+            "applicable": true,
+            "visual_changes": [
+              "Centered icon and text"
+            ],
+            "color_behavior": [
+              "on_surface_variant grey"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "xl, grey"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "hover": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "pressed": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "focused": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "disabled": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "loading": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "selected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "active": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "inactive": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "success": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "pending": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "error": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "warning": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "unread": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "full": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "booked": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "verified": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "rejected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          }
+        }
+      },
+      "error_state_block": {
+        "supported_states": {
+          "default": {
+            "applicable": true,
+            "visual_changes": [
+              "Centered error view"
+            ],
+            "color_behavior": [
+              "Text: error",
+              "Icon: error"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "xl, error"
+            ],
+            "motion_intent": [
+              "pop"
+            ],
+            "accessibility_notes": [
+              "Announce critical failure"
+            ]
+          },
+          "hover": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "pressed": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "focused": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "disabled": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "loading": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "selected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "active": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "inactive": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "success": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "pending": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "error": {
+            "applicable": true,
+            "visual_changes": [
+              "Retry button appears"
+            ],
+            "color_behavior": [
+              "error text"
+            ],
+            "typography_behavior": [
+              "body_large"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "xl error"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "warning": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "unread": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "full": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "booked": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "verified": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "rejected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          }
+        }
+      },
+      "snackbar": {
+        "supported_states": {
+          "default": {
+            "applicable": true,
+            "visual_changes": [
+              "Bottom floating bar"
+            ],
+            "color_behavior": [
+              "Background: inverse_surface",
+              "Text: on_inverse_surface"
+            ],
+            "typography_behavior": [
+              "body_medium"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "sm"
+            ],
+            "motion_intent": [
+              "slide-up"
+            ],
+            "accessibility_notes": [
+              "Announce text immediately"
+            ]
+          },
+          "hover": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "pressed": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "focused": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "disabled": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "loading": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "selected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "active": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "inactive": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "success": {
+            "applicable": true,
+            "visual_changes": [
+              "Success icon leading"
+            ],
+            "color_behavior": [
+              "inverse_surface"
+            ],
+            "typography_behavior": [
+              "body_medium"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "sm success"
+            ],
+            "motion_intent": [
+              "slide-up"
+            ],
+            "accessibility_notes": []
+          },
+          "pending": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "error": {
+            "applicable": true,
+            "visual_changes": [
+              "Error icon leading red"
+            ],
+            "color_behavior": [
+              "inverse_surface"
+            ],
+            "typography_behavior": [
+              "body_medium"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "sm error"
+            ],
+            "motion_intent": [
+              "shake"
+            ],
+            "accessibility_notes": []
+          },
+          "warning": {
+            "applicable": true,
+            "visual_changes": [
+              "Warning icon leading amber"
+            ],
+            "color_behavior": [
+              "inverse_surface"
+            ],
+            "typography_behavior": [
+              "body_medium"
+            ],
+            "border_behavior": [
+              "none"
+            ],
+            "icon_behavior": [
+              "sm warning"
+            ],
+            "motion_intent": [
+              "none"
+            ],
+            "accessibility_notes": []
+          },
+          "unread": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "full": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "booked": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "verified": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          },
+          "rejected": {
+            "applicable": false,
+            "visual_changes": [],
+            "color_behavior": [],
+            "typography_behavior": [],
+            "border_behavior": [],
+            "icon_behavior": [],
+            "motion_intent": [],
+            "accessibility_notes": []
+          }
+        }
+      }
+    }
+  }
+}
