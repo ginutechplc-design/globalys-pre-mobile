@@ -1,0 +1,2446 @@
+{
+  "file_path": "theme_pack/06_component_theme_contract.json",
+  "content": {
+    "shell_and_navigation": [
+      {
+        "component_name": "app_shell",
+        "category": "shell_and_navigation",
+        "purpose": [
+          "Provide root application structure",
+          "Define screen safe areas",
+          "Establish background continuity"
+        ],
+        "visual_hierarchy": "Root",
+        "layout_role": "Foundation surface for all content",
+        "shape_token": "none",
+        "padding_rule": "screen_outer_padding",
+        "sizing_rule": "full_viewport",
+        "typography_rule": "none",
+        "color_rule": "background",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "none",
+        "interaction_rule": [
+          "Vertical scrolling only"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "standard",
+          "modal"
+        ],
+        "forbidden_variants": [
+          "branded_backgrounds",
+          "gradient_fills"
+        ],
+        "accessibility_notes": [
+          "Must respect system safe areas",
+          "Contrast between background and surface must be visible"
+        ],
+        "implementation_notes": [
+          "Use Scaffold in Flutter",
+          "background color should be #FEF7FF"
+        ]
+      },
+      {
+        "component_name": "top_app_bar",
+        "category": "shell_and_navigation",
+        "purpose": [
+          "Surface current screen title",
+          "Provide back navigation",
+          "Host primary screen actions"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Header",
+        "shape_token": "none",
+        "padding_rule": "top_bar_horizontal_padding",
+        "sizing_rule": "top_bar height (64dp)",
+        "typography_rule": "title_large",
+        "color_rule": "surface",
+        "border_rule": "hairline bottom (outline_variant)",
+        "elevation_rule": "level0",
+        "icon_rule": "md",
+        "interaction_rule": [
+          "Tap navigation icon to go back",
+          "Tap action icons for menu/search"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "center_aligned",
+          "small"
+        ],
+        "forbidden_variants": [
+          "large",
+          "medium",
+          "purple_background"
+        ],
+        "accessibility_notes": [
+          "Navigation icon must have 'Back' label",
+          "Title must be read first by screen readers"
+        ],
+        "implementation_notes": [
+          "AppBar with elevation 0",
+          "Bottom border for separation"
+        ]
+      },
+      {
+        "component_name": "large_header_block",
+        "category": "shell_and_navigation",
+        "purpose": [
+          "Introduce high-level context",
+          "Profile summary introduction",
+          "Marketing/Dashboard welcome"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Section",
+        "shape_token": "none",
+        "padding_rule": "lg",
+        "sizing_rule": "Intrinsic",
+        "typography_rule": "headline_large",
+        "color_rule": "surface",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "xl",
+        "interaction_rule": [
+          "Static display"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "standard"
+        ],
+        "forbidden_variants": [
+          "interactive"
+        ],
+        "accessibility_notes": [
+          "Avoid low contrast text on images"
+        ],
+        "implementation_notes": [
+          "Used for 'Welcome back' or 'Service Details' tops"
+        ]
+      },
+      {
+        "component_name": "bottom_navigation",
+        "category": "shell_and_navigation",
+        "purpose": [
+          "Primary app navigation switching",
+          "Show active root section"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Footer",
+        "shape_token": "none",
+        "padding_rule": "none",
+        "sizing_rule": "nav_bar height (80dp)",
+        "typography_rule": "label_medium",
+        "color_rule": "surface",
+        "border_rule": "hairline top (outline_variant)",
+        "elevation_rule": "level0",
+        "icon_rule": "md",
+        "interaction_rule": [
+          "Tap to switch root view",
+          "Active state uses primary icon color"
+        ],
+        "semantic_dependencies": [
+          "unread (indicator dot)"
+        ],
+        "allowed_variants": [
+          "standard"
+        ],
+        "forbidden_variants": [
+          "labeled_selected_only"
+        ],
+        "accessibility_notes": [
+          "Minimum tap target 48x48 per item",
+          "High contrast for active icon"
+        ],
+        "implementation_notes": [
+          "NavigationBar component",
+          "No container indicator shadow"
+        ]
+      },
+      {
+        "component_name": "tab_bar",
+        "category": "shell_and_navigation",
+        "purpose": [
+          "Sub-navigation within a screen",
+          "Content filtering"
+        ],
+        "visual_hierarchy": "Secondary",
+        "layout_role": "Sub-navigation",
+        "shape_token": "none",
+        "padding_rule": "none",
+        "sizing_rule": "height 48dp",
+        "typography_rule": "title_small",
+        "color_rule": "surface",
+        "border_rule": "thin bottom indicator (primary)",
+        "elevation_rule": "level0",
+        "icon_rule": "sm",
+        "interaction_rule": [
+          "Swipe to switch tabs",
+          "Tap to switch tabs"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "fixed",
+          "scrollable"
+        ],
+        "forbidden_variants": [
+          "pill_shaped"
+        ],
+        "accessibility_notes": [
+          "Indicator must provide clear visual change",
+          "Contrast ratio > 4.5:1"
+        ],
+        "implementation_notes": [
+          "TabBar with primary indicator color"
+        ]
+      },
+      {
+        "component_name": "segmented_control",
+        "category": "shell_and_navigation",
+        "purpose": [
+          "Switch between mutually exclusive views",
+          "Toggle list vs map view"
+        ],
+        "visual_hierarchy": "Secondary",
+        "layout_role": "Action row",
+        "shape_token": "corner_sm",
+        "padding_rule": "xs",
+        "sizing_rule": "height 40dp",
+        "typography_rule": "label_large",
+        "color_rule": "surface_container",
+        "border_rule": "thin (outline_variant)",
+        "elevation_rule": "level0",
+        "icon_rule": "sm",
+        "interaction_rule": [
+          "Tap segment to select",
+          "Animated sliding selection background"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "text_only",
+          "icon_only"
+        ],
+        "forbidden_variants": [
+          "outlined_no_container"
+        ],
+        "accessibility_notes": [
+          "Selected state must be announced as checked"
+        ],
+        "implementation_notes": [
+          "CupertinoSegmentedControl or Custom Material 3 equivalent"
+        ]
+      }
+    ],
+    "buttons_and_actions": [
+      {
+        "component_name": "primary_button",
+        "category": "buttons_and_actions",
+        "purpose": [
+          "Execute main screen action",
+          "Confirm booking",
+          "Confirm payment"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Call to action",
+        "shape_token": "corner_sm",
+        "padding_rule": "md",
+        "sizing_rule": "primary_button height (48dp)",
+        "typography_rule": "label_large",
+        "color_rule": "primary",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "sm",
+        "interaction_rule": [
+          "State: Hover/Focus/Pressed shades",
+          "Loading state: spinner replaces text"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "full_width",
+          "intrinsic"
+        ],
+        "forbidden_variants": [
+          "rounded_pill",
+          "gradient"
+        ],
+        "accessibility_notes": [
+          "Min height 48dp",
+          "White text on purple background passes AA"
+        ],
+        "implementation_notes": [
+          "ElevatedButton with style: 0 elevation, flat appearance"
+        ]
+      },
+      {
+        "component_name": "secondary_button",
+        "category": "buttons_and_actions",
+        "purpose": [
+          "Execute alternative actions",
+          "Cancel",
+          "Back",
+          "Edit"
+        ],
+        "visual_hierarchy": "Secondary",
+        "layout_role": "Supporting action",
+        "shape_token": "corner_sm",
+        "padding_rule": "md",
+        "sizing_rule": "secondary_button height (40dp)",
+        "typography_rule": "label_large",
+        "color_rule": "surface",
+        "border_rule": "thin (outline)",
+        "elevation_rule": "level0",
+        "icon_rule": "sm",
+        "interaction_rule": [
+          "State: Gray pressed shade"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "outlined"
+        ],
+        "forbidden_variants": [
+          "filled",
+          "tonal"
+        ],
+        "accessibility_notes": [
+          "Border contrast must be sufficient against background"
+        ],
+        "implementation_notes": [
+          "OutlinedButton"
+        ]
+      },
+      {
+        "component_name": "tertiary_button",
+        "category": "buttons_and_actions",
+        "purpose": [
+          "Subtle actions",
+          "More info",
+          "Add detail"
+        ],
+        "visual_hierarchy": "Tertiary",
+        "layout_role": "Supporting action",
+        "shape_token": "corner_sm",
+        "padding_rule": "sm",
+        "sizing_rule": "Intrinsic",
+        "typography_rule": "label_large",
+        "color_rule": "surface",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "sm",
+        "interaction_rule": [
+          "Text color: primary"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "text_only"
+        ],
+        "forbidden_variants": [
+          "filled",
+          "outlined"
+        ],
+        "accessibility_notes": [
+          "Ensure text has enough padding for tap target"
+        ],
+        "implementation_notes": [
+          "TextButton"
+        ]
+      },
+      {
+        "component_name": "destructive_button",
+        "category": "buttons_and_actions",
+        "purpose": [
+          "Delete account",
+          "Cancel booking with penalty",
+          "Reject service"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "High risk action",
+        "shape_token": "corner_sm",
+        "padding_rule": "md",
+        "sizing_rule": "height 48dp",
+        "typography_rule": "label_large",
+        "color_rule": "error",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "sm",
+        "interaction_rule": [
+          "Confirm dialog required on tap"
+        ],
+        "semantic_dependencies": [
+          "failed",
+          "rejected"
+        ],
+        "allowed_variants": [
+          "filled",
+          "outlined",
+          "text"
+        ],
+        "forbidden_variants": [
+          "branded_purple"
+        ],
+        "accessibility_notes": [
+          "Clear text warning of consequences"
+        ],
+        "implementation_notes": [
+          "Button with error color"
+        ]
+      },
+      {
+        "component_name": "text_button",
+        "category": "buttons_and_actions",
+        "purpose": [
+          "Low priority actions",
+          "Learn more",
+          "Links"
+        ],
+        "visual_hierarchy": "Tertiary",
+        "layout_role": "Supporting action",
+        "shape_token": "corner_sm",
+        "padding_rule": "sm",
+        "sizing_rule": "Intrinsic",
+        "typography_rule": "label_large",
+        "color_rule": "surface",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "none",
+        "interaction_rule": [
+          "Text color: primary"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "standard"
+        ],
+        "forbidden_variants": [
+          "high_elevation"
+        ],
+        "accessibility_notes": [
+          "Standard tap target 48dp"
+        ],
+        "implementation_notes": [
+          "TextButton"
+        ]
+      },
+      {
+        "component_name": "icon_button",
+        "category": "buttons_and_actions",
+        "purpose": [
+          "Small singular actions",
+          "Like",
+          "Close",
+          "Help"
+        ],
+        "visual_hierarchy": "Secondary",
+        "layout_role": "Action",
+        "shape_token": "corner_full",
+        "padding_rule": "xs",
+        "sizing_rule": "48x48dp",
+        "typography_rule": "none",
+        "color_rule": "surface",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "md",
+        "interaction_rule": [
+          "Splash effect on press"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "standard",
+          "filled_tonal",
+          "outlined"
+        ],
+        "forbidden_variants": [
+          "large"
+        ],
+        "accessibility_notes": [
+          "Semantic tooltip required for each icon"
+        ],
+        "implementation_notes": [
+          "IconButton"
+        ]
+      }
+    ],
+    "inputs_and_forms": [
+      {
+        "component_name": "text_field",
+        "category": "inputs_and_forms",
+        "purpose": [
+          "General text input",
+          "Login",
+          "Profile edit"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Form input",
+        "shape_token": "corner_sm",
+        "padding_rule": "md",
+        "sizing_rule": "input_field height (56dp)",
+        "typography_rule": "body_large",
+        "color_rule": "surface_container_low",
+        "border_rule": "thin (outline)",
+        "elevation_rule": "level0",
+        "icon_rule": "sm",
+        "interaction_rule": [
+          "Focus: border strong (primary)",
+          "Active typing: label floats"
+        ],
+        "semantic_dependencies": [
+          "error (border/text)"
+        ],
+        "allowed_variants": [
+          "standard",
+          "with_prefix",
+          "with_suffix"
+        ],
+        "forbidden_variants": [
+          "filled_no_border",
+          "rounded_pill"
+        ],
+        "accessibility_notes": [
+          "Label must remain visible after focus"
+        ],
+        "implementation_notes": [
+          "TextField decoration: OutlineInput"
+        ]
+      },
+      {
+        "component_name": "search_field",
+        "category": "inputs_and_forms",
+        "purpose": [
+          "Marketplace search",
+          "Service filtering"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Search input",
+        "shape_token": "corner_full",
+        "padding_rule": "md",
+        "sizing_rule": "search_field height (48dp)",
+        "typography_rule": "body_large",
+        "color_rule": "surface_container_high",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "md",
+        "interaction_rule": [
+          "Clear icon appears on text entry"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "standard"
+        ],
+        "forbidden_variants": [
+          "underlined"
+        ],
+        "accessibility_notes": [
+          "Search label in accessibility tree"
+        ],
+        "implementation_notes": [
+          "SearchBar component"
+        ]
+      },
+      {
+        "component_name": "multiline_field",
+        "category": "inputs_and_forms",
+        "purpose": [
+          "Service description",
+          "Bio",
+          "Messaging content"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Form input",
+        "shape_token": "corner_sm",
+        "padding_rule": "md",
+        "sizing_rule": "min_height 120dp",
+        "typography_rule": "body_large",
+        "color_rule": "surface_container_low",
+        "border_rule": "thin (outline)",
+        "elevation_rule": "level0",
+        "icon_rule": "none",
+        "interaction_rule": [
+          "Scrollable text area"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "standard"
+        ],
+        "forbidden_variants": [
+          "one_line"
+        ],
+        "accessibility_notes": [
+          "Max character count should be announced"
+        ],
+        "implementation_notes": [
+          "TextField maxLines: 5"
+        ]
+      },
+      {
+        "component_name": "dropdown_field",
+        "category": "inputs_and_forms",
+        "purpose": [
+          "Select service category",
+          "Select region"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Form input",
+        "shape_token": "corner_sm",
+        "padding_rule": "md",
+        "sizing_rule": "height 56dp",
+        "typography_rule": "body_large",
+        "color_rule": "surface_container_low",
+        "border_rule": "thin (outline)",
+        "elevation_rule": "level0",
+        "icon_rule": "sm",
+        "interaction_rule": [
+          "Tap opens modal sheet or menu"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "standard"
+        ],
+        "forbidden_variants": [
+          "multi_select (use chips)"
+        ],
+        "accessibility_notes": [
+          "Announce current selection"
+        ],
+        "implementation_notes": [
+          "DropdownButtonFormField"
+        ]
+      },
+      {
+        "component_name": "date_time_field",
+        "category": "inputs_and_forms",
+        "purpose": [
+          "Pick booking start",
+          "Select date of birth"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Form input",
+        "shape_token": "corner_sm",
+        "padding_rule": "md",
+        "sizing_rule": "height 56dp",
+        "typography_rule": "body_large",
+        "color_rule": "surface_container_low",
+        "border_rule": "thin (outline)",
+        "elevation_rule": "level0",
+        "icon_rule": "sm (calendar/clock)",
+        "interaction_rule": [
+          "Tap opens system picker"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "standard"
+        ],
+        "forbidden_variants": [
+          "inline_calendar (unless booking card)"
+        ],
+        "accessibility_notes": [
+          "Ensure screen readers can navigate calendar items"
+        ],
+        "implementation_notes": [
+          "Read-only TextField with Tap callback"
+        ]
+      },
+      {
+        "component_name": "checkbox",
+        "category": "inputs_and_forms",
+        "purpose": [
+          "Terms acceptance",
+          "Multi-filter selection"
+        ],
+        "visual_hierarchy": "Secondary",
+        "layout_role": "Selection input",
+        "shape_token": "corner_xs",
+        "padding_rule": "xs",
+        "sizing_rule": "24x24dp target",
+        "typography_rule": "body_medium",
+        "color_rule": "primary (checked)",
+        "border_rule": "thin (outline)",
+        "elevation_rule": "level0",
+        "icon_rule": "sm",
+        "interaction_rule": [
+          "Toggle state on tap"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "with_label",
+          "standalone"
+        ],
+        "forbidden_variants": [
+          "rounded_pill"
+        ],
+        "accessibility_notes": [
+          "Label and box share one tap target"
+        ],
+        "implementation_notes": [
+          "Checkbox"
+        ]
+      },
+      {
+        "component_name": "radio",
+        "category": "inputs_and_forms",
+        "purpose": [
+          "Single selection",
+          "Payment method selection"
+        ],
+        "visual_hierarchy": "Secondary",
+        "layout_role": "Selection input",
+        "shape_token": "corner_full",
+        "padding_rule": "xs",
+        "sizing_rule": "24x24dp target",
+        "typography_rule": "body_medium",
+        "color_rule": "primary (selected)",
+        "border_rule": "thin (outline)",
+        "elevation_rule": "level0",
+        "icon_rule": "sm",
+        "interaction_rule": [
+          "Mutual exclusivity in group"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "with_label",
+          "standalone"
+        ],
+        "forbidden_variants": [
+          "checkbox_style"
+        ],
+        "accessibility_notes": [
+          "Group radio buttons with a fieldset equivalent"
+        ],
+        "implementation_notes": [
+          "Radio"
+        ]
+      },
+      {
+        "component_name": "switch",
+        "category": "inputs_and_forms",
+        "purpose": [
+          "Enable notifications",
+          "Provider availability toggle"
+        ],
+        "visual_hierarchy": "Secondary",
+        "layout_role": "Toggle",
+        "shape_token": "corner_full",
+        "padding_rule": "xs",
+        "sizing_rule": "Standard track",
+        "typography_rule": "body_medium",
+        "color_rule": "primary (on)",
+        "border_rule": "none",
+        "elevation_rule": "level1 (thumb)",
+        "icon_rule": "none",
+        "interaction_rule": [
+          "Slide or tap to toggle"
+        ],
+        "semantic_dependencies": [
+          "active (on state)"
+        ],
+        "allowed_variants": [
+          "standard"
+        ],
+        "forbidden_variants": [
+          "labeled_inside"
+        ],
+        "accessibility_notes": [
+          "State must be clear from both color and position"
+        ],
+        "implementation_notes": [
+          "Switch"
+        ]
+      },
+      {
+        "component_name": "helper_text",
+        "category": "inputs_and_forms",
+        "purpose": [
+          "Field explanation",
+          "Constraint hint"
+        ],
+        "visual_hierarchy": "Tertiary",
+        "layout_role": "Metadata",
+        "shape_token": "none",
+        "padding_rule": "xs",
+        "sizing_rule": "Intrinsic",
+        "typography_rule": "body_small",
+        "color_rule": "outline",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "none",
+        "interaction_rule": [
+          "Static display"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "standard"
+        ],
+        "forbidden_variants": [
+          "error_color"
+        ],
+        "accessibility_notes": [
+          "Associated with input via aria-describedby equivalent"
+        ],
+        "implementation_notes": [
+          "Text widget below field"
+        ]
+      },
+      {
+        "component_name": "validation_message",
+        "category": "inputs_and_forms",
+        "purpose": [
+          "Error reporting",
+          "Real-time validation feedback"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Feedback",
+        "shape_token": "none",
+        "padding_rule": "xs",
+        "sizing_rule": "Intrinsic",
+        "typography_rule": "body_small",
+        "color_rule": "error",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "xs (error icon)",
+        "interaction_rule": [
+          "Appears on error state"
+        ],
+        "semantic_dependencies": [
+          "error",
+          "failed"
+        ],
+        "allowed_variants": [
+          "error",
+          "success",
+          "warning"
+        ],
+        "forbidden_variants": [
+          "dialog_box"
+        ],
+        "accessibility_notes": [
+          "Screen reader focus jump to first error"
+        ],
+        "implementation_notes": [
+          "InputDecoration.errorText"
+        ]
+      }
+    ],
+    "cards_and_content": [
+      {
+        "component_name": "service_card",
+        "category": "cards_and_content",
+        "purpose": [
+          "Display marketplace service listing"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Content block",
+        "shape_token": "corner_md",
+        "padding_rule": "none (image) + md (content)",
+        "sizing_rule": "Intrinsic width, fixed aspect image",
+        "typography_rule": "headline_small (title)",
+        "color_rule": "surface",
+        "border_rule": "thin (outline_variant)",
+        "elevation_rule": "level1",
+        "icon_rule": "sm",
+        "interaction_rule": [
+          "Tap to view details",
+          "Scale or shadow change on press"
+        ],
+        "semantic_dependencies": [
+          "available",
+          "full"
+        ],
+        "allowed_variants": [
+          "vertical",
+          "horizontal_dense"
+        ],
+        "forbidden_variants": [
+          "3D_effect",
+          "floating_action_buttons"
+        ],
+        "accessibility_notes": [
+          "Image needs alt text",
+          "Price must be readable"
+        ],
+        "implementation_notes": [
+          "Card with ClipRRect for image"
+        ]
+      },
+      {
+        "component_name": "provider_card",
+        "category": "cards_and_content",
+        "purpose": [
+          "Display professional profile summary"
+        ],
+        "visual_hierarchy": "Secondary",
+        "layout_role": "Identity block",
+        "shape_token": "corner_md",
+        "padding_rule": "sm",
+        "sizing_rule": "Intrinsic",
+        "typography_rule": "title_medium",
+        "color_rule": "surface",
+        "border_rule": "thin (outline_variant)",
+        "elevation_rule": "level0",
+        "icon_rule": "sm",
+        "interaction_rule": [
+          "Tap to view profile"
+        ],
+        "semantic_dependencies": [
+          "verified",
+          "trust_badge"
+        ],
+        "allowed_variants": [
+          "compact",
+          "detailed"
+        ],
+        "forbidden_variants": [
+          "high_elevation"
+        ],
+        "accessibility_notes": [
+          "Name and bio text contrast"
+        ],
+        "implementation_notes": [
+          "ListTile inside a Card"
+        ]
+      },
+      {
+        "component_name": "summary_card",
+        "category": "cards_and_content",
+        "purpose": [
+          "Show transaction/booking highlights"
+        ],
+        "visual_hierarchy": "Secondary",
+        "layout_role": "Information group",
+        "shape_token": "corner_md",
+        "padding_rule": "md",
+        "sizing_rule": "Intrinsic",
+        "typography_rule": "body_large",
+        "color_rule": "surface_container_low",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "sm",
+        "interaction_rule": [
+          "Static display with detail button"
+        ],
+        "semantic_dependencies": [
+          "paid",
+          "unpaid",
+          "pending"
+        ],
+        "allowed_variants": [
+          "standard"
+        ],
+        "forbidden_variants": [
+          "interactive_background"
+        ],
+        "accessibility_notes": [
+          "Logical reading order from top to bottom"
+        ],
+        "implementation_notes": [
+          "Column of rows"
+        ]
+      },
+      {
+        "component_name": "detail_section_card",
+        "category": "cards_and_content",
+        "purpose": [
+          "Group details on a detail page"
+        ],
+        "visual_hierarchy": "Tertiary",
+        "layout_role": "Layout container",
+        "shape_token": "corner_md",
+        "padding_rule": "lg",
+        "sizing_rule": "Intrinsic",
+        "typography_rule": "title_medium (header)",
+        "color_rule": "surface",
+        "border_rule": "thin (outline_variant)",
+        "elevation_rule": "level0",
+        "icon_rule": "none",
+        "interaction_rule": [
+          "Static content"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "standard",
+          "bordered",
+          "flat"
+        ],
+        "forbidden_variants": [
+          "nested_scrolling"
+        ],
+        "accessibility_notes": [
+          "Section headers for navigation"
+        ],
+        "implementation_notes": [
+          "Container with border"
+        ]
+      },
+      {
+        "component_name": "info_row",
+        "category": "cards_and_content",
+        "purpose": [
+          "Display label-value pair"
+        ],
+        "visual_hierarchy": "Tertiary",
+        "layout_role": "Data row",
+        "shape_token": "none",
+        "padding_rule": "sm vertical",
+        "sizing_rule": "Full width",
+        "typography_rule": "body_medium",
+        "color_rule": "surface",
+        "border_rule": "hairline bottom (outline_variant)",
+        "elevation_rule": "level0",
+        "icon_rule": "sm",
+        "interaction_rule": [
+          "None or copy on long press"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "standard",
+          "bold_value"
+        ],
+        "forbidden_variants": [
+          "wrapped_lines (if possible)"
+        ],
+        "accessibility_notes": [
+          "Label and value announced together"
+        ],
+        "implementation_notes": [
+          "Row with MainAxisAlignment.spaceBetween"
+        ]
+      },
+      {
+        "component_name": "inline_meta_block",
+        "category": "cards_and_content",
+        "purpose": [
+          "Display small metadata pieces",
+          "Rating, location, distance"
+        ],
+        "visual_hierarchy": "Tertiary",
+        "layout_role": "Inline group",
+        "shape_token": "none",
+        "padding_rule": "none",
+        "sizing_rule": "Intrinsic",
+        "typography_rule": "body_small",
+        "color_rule": "on_surface_variant",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "xs",
+        "interaction_rule": [
+          "Static display"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "horizontal",
+          "vertical_stack"
+        ],
+        "forbidden_variants": [
+          "clickable"
+        ],
+        "accessibility_notes": [
+          "Icons need labels (e.g., 'Star' for rating icon)"
+        ],
+        "implementation_notes": [
+          "Wrap with spacing_xs"
+        ]
+      }
+    ],
+    "chips_badges_and_tags": [
+      {
+        "component_name": "filter_chip",
+        "category": "chips_badges_and_tags",
+        "purpose": [
+          "Toggle search filters"
+        ],
+        "visual_hierarchy": "Secondary",
+        "layout_role": "Action",
+        "shape_token": "corner_sm",
+        "padding_rule": "xs horizontal",
+        "sizing_rule": "chip height (32dp)",
+        "typography_rule": "label_large",
+        "color_rule": "surface",
+        "border_rule": "thin (outline)",
+        "elevation_rule": "level0",
+        "icon_rule": "sm",
+        "interaction_rule": [
+          "Selected state: filled primary, on_primary text"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "standard",
+          "with_avatar",
+          "with_count"
+        ],
+        "forbidden_variants": [
+          "rounded_pill"
+        ],
+        "accessibility_notes": [
+          "State announced as selected/unselected"
+        ],
+        "implementation_notes": [
+          "FilterChip"
+        ]
+      },
+      {
+        "component_name": "status_badge",
+        "category": "chips_badges_and_tags",
+        "purpose": [
+          "Show operational status",
+          "Active, Pending, Failed"
+        ],
+        "visual_hierarchy": "Secondary",
+        "layout_role": "Indicator",
+        "shape_token": "corner_xs",
+        "padding_rule": "xxs",
+        "sizing_rule": "Intrinsic",
+        "typography_rule": "label_medium",
+        "color_rule": "semantic_container",
+        "border_rule": "thin (semantic_border)",
+        "elevation_rule": "level0",
+        "icon_rule": "xs",
+        "interaction_rule": [
+          "None"
+        ],
+        "semantic_dependencies": [
+          "all status tokens"
+        ],
+        "allowed_variants": [
+          "filled",
+          "outlined"
+        ],
+        "forbidden_variants": [
+          "clickable"
+        ],
+        "accessibility_notes": [
+          "Color should not be only indicator of status"
+        ],
+        "implementation_notes": [
+          "Custom container using semantic mapping"
+        ]
+      },
+      {
+        "component_name": "role_badge",
+        "category": "chips_badges_and_tags",
+        "purpose": [
+          "Identify user type",
+          "Admin, Provider, Customer"
+        ],
+        "visual_hierarchy": "Tertiary",
+        "layout_role": "Indicator",
+        "shape_token": "corner_xs",
+        "padding_rule": "xxs",
+        "sizing_rule": "Intrinsic",
+        "typography_rule": "label_small",
+        "color_rule": "secondary_container",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "none",
+        "interaction_rule": [
+          "None"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "standard"
+        ],
+        "forbidden_variants": [
+          "error_color"
+        ],
+        "accessibility_notes": [
+          "High contrast text required"
+        ],
+        "implementation_notes": [
+          "Small padding container"
+        ]
+      },
+      {
+        "component_name": "trust_badge",
+        "category": "chips_badges_and_tags",
+        "purpose": [
+          "Signify verification status",
+          "ID Verified"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Seal",
+        "shape_token": "corner_full",
+        "padding_rule": "xs",
+        "sizing_rule": "Intrinsic",
+        "typography_rule": "label_medium",
+        "color_rule": "verified_container",
+        "border_rule": "thin (verified_border)",
+        "elevation_rule": "level0",
+        "icon_rule": "sm (shield/check)",
+        "interaction_rule": [
+          "Static display"
+        ],
+        "semantic_dependencies": [
+          "verified"
+        ],
+        "allowed_variants": [
+          "standard",
+          "compact"
+        ],
+        "forbidden_variants": [
+          "success_green"
+        ],
+        "accessibility_notes": [
+          "Distinct from standard success state"
+        ],
+        "implementation_notes": [
+          "Specific indigo-based semantic token"
+        ]
+      },
+      {
+        "component_name": "availability_badge",
+        "category": "chips_badges_and_tags",
+        "purpose": [
+          "Show if service is ready for booking"
+        ],
+        "visual_hierarchy": "Secondary",
+        "layout_role": "Indicator",
+        "shape_token": "corner_xs",
+        "padding_rule": "xxs",
+        "sizing_rule": "Intrinsic",
+        "typography_rule": "label_medium",
+        "color_rule": "available_container",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "xs",
+        "interaction_rule": [
+          "None"
+        ],
+        "semantic_dependencies": [
+          "available",
+          "full"
+        ],
+        "allowed_variants": [
+          "standard"
+        ],
+        "forbidden_variants": [
+          "purple"
+        ],
+        "accessibility_notes": [
+          "Accessible label 'Available now'"
+        ],
+        "implementation_notes": [
+          "Green-olive semantic token"
+        ]
+      }
+    ],
+    "booking_and_scheduling": [
+      {
+        "component_name": "availability_slot_card",
+        "category": "booking_and_scheduling",
+        "purpose": [
+          "Display time slot for booking"
+        ],
+        "visual_hierarchy": "Secondary",
+        "layout_role": "Selection item",
+        "shape_token": "corner_sm",
+        "padding_rule": "sm",
+        "sizing_rule": "width approx 80-100dp",
+        "typography_rule": "title_small",
+        "color_rule": "surface",
+        "border_rule": "thin (outline)",
+        "elevation_rule": "level0",
+        "icon_rule": "none",
+        "interaction_rule": [
+          "Tap to select",
+          "Selected state: primary"
+        ],
+        "semantic_dependencies": [
+          "available",
+          "booked",
+          "full"
+        ],
+        "allowed_variants": [
+          "enabled",
+          "disabled"
+        ],
+        "forbidden_variants": [
+          "pill"
+        ],
+        "accessibility_notes": [
+          "Announce as button",
+          "State announced if occupied"
+        ],
+        "implementation_notes": [
+          "Grid item"
+        ]
+      },
+      {
+        "component_name": "booking_summary_card",
+        "category": "booking_and_scheduling",
+        "purpose": [
+          "Review details before payment"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Review block",
+        "shape_token": "corner_md",
+        "padding_rule": "md",
+        "sizing_rule": "Intrinsic",
+        "typography_rule": "body_large",
+        "color_rule": "surface",
+        "border_rule": "thin (outline_variant)",
+        "elevation_rule": "level0",
+        "icon_rule": "sm",
+        "interaction_rule": [
+          "Static review"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "standard"
+        ],
+        "forbidden_variants": [
+          "none"
+        ],
+        "accessibility_notes": [
+          "Price total prominent"
+        ],
+        "implementation_notes": [
+          "Summary layout"
+        ]
+      },
+      {
+        "component_name": "booking_status_block",
+        "category": "booking_and_scheduling",
+        "purpose": [
+          "Display lifecycle state of booking"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Status indicator",
+        "shape_token": "none",
+        "padding_rule": "md",
+        "sizing_rule": "Full width",
+        "typography_rule": "title_medium",
+        "color_rule": "semantic_container",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "md",
+        "interaction_rule": [
+          "None"
+        ],
+        "semantic_dependencies": [
+          "booked",
+          "pending",
+          "cancelled",
+          "active"
+        ],
+        "allowed_variants": [
+          "banner",
+          "inline"
+        ],
+        "forbidden_variants": [
+          "error_red (unless truly failed)"
+        ],
+        "accessibility_notes": [
+          "High-contrast status text"
+        ],
+        "implementation_notes": [
+          "Top block of booking detail screen"
+        ]
+      },
+      {
+        "component_name": "timeline_step",
+        "category": "booking_and_scheduling",
+        "purpose": [
+          "Show progress of booking or project"
+        ],
+        "visual_hierarchy": "Tertiary",
+        "layout_role": "Sequence",
+        "shape_token": "corner_full (dot)",
+        "padding_rule": "xs",
+        "sizing_rule": "Vertical line",
+        "typography_rule": "body_medium",
+        "color_rule": "outline (inactive), primary (active)",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "sm",
+        "interaction_rule": [
+          "Static display"
+        ],
+        "semantic_dependencies": [
+          "active",
+          "archived"
+        ],
+        "allowed_variants": [
+          "vertical",
+          "horizontal"
+        ],
+        "forbidden_variants": [
+          "colorful_segments"
+        ],
+        "accessibility_notes": [
+          "Describe 'Step X of Y'"
+        ],
+        "implementation_notes": [
+          "Stepper-like custom widget"
+        ]
+      },
+      {
+        "component_name": "calendar_strip",
+        "category": "booking_and_scheduling",
+        "purpose": [
+          "Horizontal date selection"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Date selector",
+        "shape_token": "none",
+        "padding_rule": "sm",
+        "sizing_rule": "height 80dp",
+        "typography_rule": "label_large",
+        "color_rule": "surface",
+        "border_rule": "hairline bottom (outline_variant)",
+        "elevation_rule": "level0",
+        "icon_rule": "none",
+        "interaction_rule": [
+          "Scroll horizontally",
+          "Tap date to select"
+        ],
+        "semantic_dependencies": [
+          "active (selected date)"
+        ],
+        "allowed_variants": [
+          "standard"
+        ],
+        "forbidden_variants": [
+          "large_grid"
+        ],
+        "accessibility_notes": [
+          "Selected date focus"
+        ],
+        "implementation_notes": [
+          "Horizontal ListView"
+        ]
+      }
+    ],
+    "payment": [
+      {
+        "component_name": "payment_method_selector",
+        "category": "payment",
+        "purpose": [
+          "Choose card or wallet"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Selection list",
+        "shape_token": "corner_sm",
+        "padding_rule": "md",
+        "sizing_rule": "Intrinsic",
+        "typography_rule": "body_large",
+        "color_rule": "surface",
+        "border_rule": "thin (outline_variant)",
+        "elevation_rule": "level0",
+        "icon_rule": "md",
+        "interaction_rule": [
+          "Tap to select method",
+          "Add new method button at end"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "standard",
+          "compact"
+        ],
+        "forbidden_variants": [
+          "checkbox (use radio/checkmark)"
+        ],
+        "accessibility_notes": [
+          "Card digits last four readout"
+        ],
+        "implementation_notes": [
+          "List of RadioListTile"
+        ]
+      },
+      {
+        "component_name": "payment_status_banner",
+        "category": "payment",
+        "purpose": [
+          "Show payment result immediately"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Feedback",
+        "shape_token": "none",
+        "padding_rule": "lg",
+        "sizing_rule": "Full width",
+        "typography_rule": "headline_small",
+        "color_rule": "semantic_container",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "lg",
+        "interaction_rule": [
+          "None"
+        ],
+        "semantic_dependencies": [
+          "paid",
+          "unpaid",
+          "failed",
+          "refunded"
+        ],
+        "allowed_variants": [
+          "success",
+          "error",
+          "processing"
+        ],
+        "forbidden_variants": [
+          "small_toast"
+        ],
+        "accessibility_notes": [
+          "High priority for screen readers"
+        ],
+        "implementation_notes": [
+          "Top-level screen banner"
+        ]
+      },
+      {
+        "component_name": "receipt_block",
+        "category": "payment",
+        "purpose": [
+          "Provide financial transaction record"
+        ],
+        "visual_hierarchy": "Secondary",
+        "layout_role": "Record",
+        "shape_token": "corner_md",
+        "padding_rule": "lg",
+        "sizing_rule": "Intrinsic",
+        "typography_rule": "body_medium",
+        "color_rule": "surface",
+        "border_rule": "strong dash (visual metaphor)",
+        "elevation_rule": "level1",
+        "icon_rule": "none",
+        "interaction_rule": [
+          "Download/Export action"
+        ],
+        "semantic_dependencies": [
+          "paid"
+        ],
+        "allowed_variants": [
+          "standard"
+        ],
+        "forbidden_variants": [
+          "bright_colors"
+        ],
+        "accessibility_notes": [
+          "All amounts must be clearly labeled"
+        ],
+        "implementation_notes": [
+          "Container with dash border or separate image"
+        ]
+      },
+      {
+        "component_name": "amount_summary_block",
+        "category": "payment",
+        "purpose": [
+          "Show itemized costs and total"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Financial summary",
+        "shape_token": "none",
+        "padding_rule": "md",
+        "sizing_rule": "Intrinsic",
+        "typography_rule": "title_large (total)",
+        "color_rule": "surface",
+        "border_rule": "hairline top (outline_variant)",
+        "elevation_rule": "level0",
+        "icon_rule": "none",
+        "interaction_rule": [
+          "Static display"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "standard"
+        ],
+        "forbidden_variants": [
+          "red_totals (unless debt)"
+        ],
+        "accessibility_notes": [
+          "Label and sum grouped"
+        ],
+        "implementation_notes": [
+          "Vertical list of key-value pairs"
+        ]
+      }
+    ],
+    "messaging": [
+      {
+        "component_name": "thread_list_item",
+        "category": "messaging",
+        "purpose": [
+          "Display recent chat thread in list"
+        ],
+        "visual_hierarchy": "Secondary",
+        "layout_role": "List item",
+        "shape_token": "none",
+        "padding_rule": "md",
+        "sizing_rule": "list_item_standard height (72dp)",
+        "typography_rule": "title_medium",
+        "color_rule": "surface",
+        "border_rule": "hairline bottom (outline_variant)",
+        "elevation_rule": "level0",
+        "icon_rule": "md (avatar)",
+        "interaction_rule": [
+          "Tap to open thread",
+          "Swipe to archive"
+        ],
+        "semantic_dependencies": [
+          "unread"
+        ],
+        "allowed_variants": [
+          "unread",
+          "read",
+          "archived"
+        ],
+        "forbidden_variants": [
+          "card_style"
+        ],
+        "accessibility_notes": [
+          "Announce unread status and count"
+        ],
+        "implementation_notes": [
+          "ListTile with leading avatar and trailing badge"
+        ]
+      },
+      {
+        "component_name": "message_bubble_mine",
+        "category": "messaging",
+        "purpose": [
+          "Display message from the current user"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Chat bubble",
+        "shape_token": "corner_md (top-right sharp)",
+        "padding_rule": "sm",
+        "sizing_rule": "Max 75% width",
+        "typography_rule": "body_large",
+        "color_rule": "primary",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "none",
+        "interaction_rule": [
+          "Long press to copy/react"
+        ],
+        "semantic_dependencies": [
+          "messaging_bubble_user"
+        ],
+        "allowed_variants": [
+          "text",
+          "image",
+          "file"
+        ],
+        "forbidden_variants": [
+          "gradient"
+        ],
+        "accessibility_notes": [
+          "Status 'Sent' or 'Read' announced"
+        ],
+        "implementation_notes": [
+          "Align: right"
+        ]
+      },
+      {
+        "component_name": "message_bubble_theirs",
+        "category": "messaging",
+        "purpose": [
+          "Display message from the recipient"
+        ],
+        "visual_hierarchy": "Secondary",
+        "layout_role": "Chat bubble",
+        "shape_token": "corner_md (top-left sharp)",
+        "padding_rule": "sm",
+        "sizing_rule": "Max 75% width",
+        "typography_rule": "body_large",
+        "color_rule": "surface_container_highest",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "none",
+        "interaction_rule": [
+          "Long press to copy/react"
+        ],
+        "semantic_dependencies": [
+          "messaging_bubble_provider"
+        ],
+        "allowed_variants": [
+          "text",
+          "image",
+          "file"
+        ],
+        "forbidden_variants": [
+          "branded_purple"
+        ],
+        "accessibility_notes": [
+          "Sender name read out"
+        ],
+        "implementation_notes": [
+          "Align: left"
+        ]
+      },
+      {
+        "component_name": "message_composer",
+        "category": "messaging",
+        "purpose": [
+          "Input and send message"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Input bar",
+        "shape_token": "none",
+        "padding_rule": "xs",
+        "sizing_rule": "Min height 56dp",
+        "typography_rule": "body_large",
+        "color_rule": "surface",
+        "border_rule": "hairline top (outline_variant)",
+        "elevation_rule": "level0",
+        "icon_rule": "md (send/attach)",
+        "interaction_rule": [
+          "Active typing allows send",
+          "Expandable text field"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "standard"
+        ],
+        "forbidden_variants": [
+          "rounded_floating"
+        ],
+        "accessibility_notes": [
+          "Send button must be reachable"
+        ],
+        "implementation_notes": [
+          "Bottom input bar"
+        ]
+      },
+      {
+        "component_name": "attachment_preview",
+        "category": "messaging",
+        "purpose": [
+          "Show file/image before sending"
+        ],
+        "visual_hierarchy": "Tertiary",
+        "layout_role": "Overlay",
+        "shape_token": "corner_sm",
+        "padding_rule": "xs",
+        "sizing_rule": "Square 64dp",
+        "typography_rule": "none",
+        "color_rule": "surface_container",
+        "border_rule": "none",
+        "elevation_rule": "level1",
+        "icon_rule": "sm (remove icon)",
+        "interaction_rule": [
+          "Tap remove icon to delete"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "image",
+          "file_icon"
+        ],
+        "forbidden_variants": [
+          "none"
+        ],
+        "accessibility_notes": [
+          "Describe content of attachment"
+        ],
+        "implementation_notes": [
+          "Overlay thumbnail"
+        ]
+      },
+      {
+        "component_name": "unread_indicator",
+        "category": "messaging",
+        "purpose": [
+          "Signal new content"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Attention dot",
+        "shape_token": "corner_full",
+        "padding_rule": "none",
+        "sizing_rule": "8x8dp or 20x20dp with count",
+        "typography_rule": "label_small",
+        "color_rule": "primary",
+        "border_rule": "thin (on_primary)",
+        "elevation_rule": "level0",
+        "icon_rule": "none",
+        "interaction_rule": [
+          "Static"
+        ],
+        "semantic_dependencies": [
+          "unread"
+        ],
+        "allowed_variants": [
+          "dot",
+          "count_badge"
+        ],
+        "forbidden_variants": [
+          "red_color"
+        ],
+        "accessibility_notes": [
+          "Announce 'X unread messages'"
+        ],
+        "implementation_notes": [
+          "Uses brand purple signature dot"
+        ]
+      }
+    ],
+    "profile_and_verification": [
+      {
+        "component_name": "profile_header",
+        "category": "profile_and_verification",
+        "purpose": [
+          "User identification and context"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Identity block",
+        "shape_token": "none",
+        "padding_rule": "lg",
+        "sizing_rule": "Intrinsic",
+        "typography_rule": "headline_medium",
+        "color_rule": "surface",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "none",
+        "interaction_rule": [
+          "Tap avatar to edit"
+        ],
+        "semantic_dependencies": [
+          "verified"
+        ],
+        "allowed_variants": [
+          "standard",
+          "centered"
+        ],
+        "forbidden_variants": [
+          "image_background_gradient"
+        ],
+        "accessibility_notes": [
+          "Clear name and status readout"
+        ],
+        "implementation_notes": [
+          "Header layout"
+        ]
+      },
+      {
+        "component_name": "avatar_container",
+        "category": "profile_and_verification",
+        "purpose": [
+          "Hold profile picture or initial"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Identity icon",
+        "shape_token": "corner_full",
+        "padding_rule": "none",
+        "sizing_rule": "avatar_scale (various sizes)",
+        "typography_rule": "title_medium (initials)",
+        "color_rule": "surface_container_high",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "none",
+        "interaction_rule": [
+          "Static or tap to upload"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "image",
+          "initials",
+          "placeholder"
+        ],
+        "forbidden_variants": [
+          "square"
+        ],
+        "accessibility_notes": [
+          "Alt text with user name"
+        ],
+        "implementation_notes": [
+          "CircleAvatar"
+        ]
+      },
+      {
+        "component_name": "upload_document_card",
+        "category": "profile_and_verification",
+        "purpose": [
+          "Submit documents for KYC/KYB"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Action block",
+        "shape_token": "corner_md",
+        "padding_rule": "lg",
+        "sizing_rule": "Intrinsic",
+        "typography_rule": "body_large",
+        "color_rule": "surface",
+        "border_rule": "thin dash (outline)",
+        "elevation_rule": "level0",
+        "icon_rule": "lg (upload icon)",
+        "interaction_rule": [
+          "Tap to pick file",
+          "Shows progress bar on upload"
+        ],
+        "semantic_dependencies": [
+          "pending",
+          "draft"
+        ],
+        "allowed_variants": [
+          "empty",
+          "filled",
+          "error"
+        ],
+        "forbidden_variants": [
+          "branded_purple_background"
+        ],
+        "accessibility_notes": [
+          "Progress status must be announced"
+        ],
+        "implementation_notes": [
+          "Dotted border container"
+        ]
+      },
+      {
+        "component_name": "verification_status_banner",
+        "category": "profile_and_verification",
+        "purpose": [
+          "Show KYC verification state"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Status indicator",
+        "shape_token": "none",
+        "padding_rule": "md",
+        "sizing_rule": "Full width",
+        "typography_rule": "title_small",
+        "color_rule": "verified_container",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "sm",
+        "interaction_rule": [
+          "None"
+        ],
+        "semantic_dependencies": [
+          "verified",
+          "rejected",
+          "pending"
+        ],
+        "allowed_variants": [
+          "standard"
+        ],
+        "forbidden_variants": [
+          "toast"
+        ],
+        "accessibility_notes": [
+          "Persistent status indicator"
+        ],
+        "implementation_notes": [
+          "Top of profile screen"
+        ]
+      },
+      {
+        "component_name": "trust_section_block",
+        "category": "profile_and_verification",
+        "purpose": [
+          "Summarize badges and verification metrics"
+        ],
+        "visual_hierarchy": "Secondary",
+        "layout_role": "Layout section",
+        "shape_token": "none",
+        "padding_rule": "md",
+        "sizing_rule": "Intrinsic",
+        "typography_rule": "title_medium",
+        "color_rule": "surface",
+        "border_rule": "hairline top (outline_variant)",
+        "elevation_rule": "level0",
+        "icon_rule": "none",
+        "interaction_rule": [
+          "None"
+        ],
+        "semantic_dependencies": [
+          "verified"
+        ],
+        "allowed_variants": [
+          "grid",
+          "list"
+        ],
+        "forbidden_variants": [
+          "interactive"
+        ],
+        "accessibility_notes": [
+          "Explain value of each trust indicator"
+        ],
+        "implementation_notes": [
+          "Group of chips/badges"
+        ]
+      }
+    ],
+    "dashboards_and_metrics": [
+      {
+        "component_name": "metric_card",
+        "category": "dashboards_and_metrics",
+        "purpose": [
+          "Show key business performance metric"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Dashboard widget",
+        "shape_token": "corner_md",
+        "padding_rule": "md",
+        "sizing_rule": "Approx 150x120dp",
+        "typography_rule": "display_small (value)",
+        "color_rule": "surface",
+        "border_rule": "thin (outline_variant)",
+        "elevation_rule": "level0",
+        "icon_rule": "none",
+        "interaction_rule": [
+          "Tap to view details screen"
+        ],
+        "semantic_dependencies": [
+          "metric_style"
+        ],
+        "allowed_variants": [
+          "with_trend",
+          "standard"
+        ],
+        "forbidden_variants": [
+          "high_elevation"
+        ],
+        "accessibility_notes": [
+          "State if metric increased or decreased"
+        ],
+        "implementation_notes": [
+          "Centered content"
+        ]
+      },
+      {
+        "component_name": "dashboard_section_header",
+        "category": "dashboards_and_metrics",
+        "purpose": [
+          "Label major dashboard regions"
+        ],
+        "visual_hierarchy": "Secondary",
+        "layout_role": "Label",
+        "shape_token": "none",
+        "padding_rule": "sm vertical",
+        "sizing_rule": "Full width",
+        "typography_rule": "title_medium",
+        "color_rule": "on_surface",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "none",
+        "interaction_rule": [
+          "Optional 'View All' link"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "standard",
+          "with_link"
+        ],
+        "forbidden_variants": [
+          "headline_large"
+        ],
+        "accessibility_notes": [
+          "Structural header"
+        ],
+        "implementation_notes": [
+          "Row with text"
+        ]
+      },
+      {
+        "component_name": "quick_action_card",
+        "category": "dashboards_and_metrics",
+        "purpose": [
+          "Launch primary tasks from dashboard"
+        ],
+        "visual_hierarchy": "Secondary",
+        "layout_role": "Action block",
+        "shape_token": "corner_sm",
+        "padding_rule": "md",
+        "sizing_rule": "Square approx 100x100dp",
+        "typography_rule": "label_medium",
+        "color_rule": "surface_container_low",
+        "border_rule": "none",
+        "elevation_rule": "level1",
+        "icon_rule": "md (action icon)",
+        "interaction_rule": [
+          "Tap to execute task"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "standard"
+        ],
+        "forbidden_variants": [
+          "purple_background"
+        ],
+        "accessibility_notes": [
+          "Button role"
+        ],
+        "implementation_notes": [
+          "Column: icon + text"
+        ]
+      },
+      {
+        "component_name": "activity_summary_block",
+        "category": "dashboards_and_metrics",
+        "purpose": [
+          "Display list of recent events/notifications"
+        ],
+        "visual_hierarchy": "Tertiary",
+        "layout_role": "List block",
+        "shape_token": "none",
+        "padding_rule": "none",
+        "sizing_rule": "Intrinsic",
+        "typography_rule": "body_medium",
+        "color_rule": "surface",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "sm",
+        "interaction_rule": [
+          "Scrollable list"
+        ],
+        "semantic_dependencies": [
+          "unread"
+        ],
+        "allowed_variants": [
+          "standard"
+        ],
+        "forbidden_variants": [
+          "cards (use list items)"
+        ],
+        "accessibility_notes": [
+          "Dynamic updates announced"
+        ],
+        "implementation_notes": [
+          "List of info_rows or activity items"
+        ]
+      }
+    ],
+    "system_feedback": [
+      {
+        "component_name": "empty_state_block",
+        "category": "system_feedback",
+        "purpose": [
+          "Inform user when no data exists"
+        ],
+        "visual_hierarchy": "Tertiary",
+        "layout_role": "Fullscreen placeholder",
+        "shape_token": "none",
+        "padding_rule": "xl",
+        "sizing_rule": "Intrinsic",
+        "typography_rule": "body_large",
+        "color_rule": "on_surface_variant",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "xl (illustrative icon)",
+        "interaction_rule": [
+          "Primary action button usually present"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "standard"
+        ],
+        "forbidden_variants": [
+          "branded_backgrounds"
+        ],
+        "accessibility_notes": [
+          "Must be clear and actionable"
+        ],
+        "implementation_notes": [
+          "Centered Column"
+        ]
+      },
+      {
+        "component_name": "error_state_block",
+        "category": "system_feedback",
+        "purpose": [
+          "Inform user of screen-level failure"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Fullscreen placeholder",
+        "shape_token": "none",
+        "padding_rule": "xl",
+        "sizing_rule": "Intrinsic",
+        "typography_rule": "body_large",
+        "color_rule": "error",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "xl (error icon)",
+        "interaction_rule": [
+          "Retry button"
+        ],
+        "semantic_dependencies": [
+          "failed",
+          "error"
+        ],
+        "allowed_variants": [
+          "standard"
+        ],
+        "forbidden_variants": [
+          "modal (if screen level)"
+        ],
+        "accessibility_notes": [
+          "Error message clearly explained"
+        ],
+        "implementation_notes": [
+          "Centered Column"
+        ]
+      },
+      {
+        "component_name": "retry_block",
+        "category": "system_feedback",
+        "purpose": [
+          "Allow user to re-attempt action"
+        ],
+        "visual_hierarchy": "Secondary",
+        "layout_role": "Action row",
+        "shape_token": "none",
+        "padding_rule": "md",
+        "sizing_rule": "Intrinsic",
+        "typography_rule": "label_large",
+        "color_rule": "surface",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "sm (refresh)",
+        "interaction_rule": [
+          "Tap to re-trigger API call"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "inline",
+          "button"
+        ],
+        "forbidden_variants": [
+          "none"
+        ],
+        "accessibility_notes": [
+          "Announce retry attempt started"
+        ],
+        "implementation_notes": [
+          "Icon with Text"
+        ]
+      },
+      {
+        "component_name": "confirmation_modal",
+        "category": "system_feedback",
+        "purpose": [
+          "Request confirmation for critical actions"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Modal dialog",
+        "shape_token": "corner_lg",
+        "padding_rule": "lg",
+        "sizing_rule": "width 280-320dp",
+        "typography_rule": "headline_small (title)",
+        "color_rule": "surface",
+        "border_rule": "none",
+        "elevation_rule": "level3",
+        "icon_rule": "none",
+        "interaction_rule": [
+          "Cancel/Confirm button row"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "standard"
+        ],
+        "forbidden_variants": [
+          "bottom_sheet (if choice-only)"
+        ],
+        "accessibility_notes": [
+          "Trap focus within modal"
+        ],
+        "implementation_notes": [
+          "AlertDialog"
+        ]
+      },
+      {
+        "component_name": "destructive_modal",
+        "category": "system_feedback",
+        "purpose": [
+          "Confirm permanent deletion or cancellation"
+        ],
+        "visual_hierarchy": "Primary",
+        "layout_role": "Modal dialog",
+        "shape_token": "corner_lg",
+        "padding_rule": "lg",
+        "sizing_rule": "width 280-320dp",
+        "typography_rule": "headline_small (title)",
+        "color_rule": "surface",
+        "border_rule": "none",
+        "elevation_rule": "level3",
+        "icon_rule": "md (warning icon)",
+        "interaction_rule": [
+          "Destructive button primary"
+        ],
+        "semantic_dependencies": [
+          "error",
+          "rejected"
+        ],
+        "allowed_variants": [
+          "standard"
+        ],
+        "forbidden_variants": [
+          "purple_branding"
+        ],
+        "accessibility_notes": [
+          "Announce high risk to screen readers"
+        ],
+        "implementation_notes": [
+          "AlertDialog with error style button"
+        ]
+      },
+      {
+        "component_name": "snackbar",
+        "category": "system_feedback",
+        "purpose": [
+          "Quick feedback on action success/failure"
+        ],
+        "visual_hierarchy": "Tertiary",
+        "layout_role": "Overlay",
+        "shape_token": "corner_xs",
+        "padding_rule": "md",
+        "sizing_rule": "Full width with margin",
+        "typography_rule": "body_medium",
+        "color_rule": "inverse_surface",
+        "border_rule": "none",
+        "elevation_rule": "level3",
+        "icon_rule": "sm",
+        "interaction_rule": [
+          "Auto-dismissal after 4s",
+          "Action button optional"
+        ],
+        "semantic_dependencies": [
+          "success",
+          "error",
+          "warning"
+        ],
+        "allowed_variants": [
+          "standard",
+          "with_action"
+        ],
+        "forbidden_variants": [
+          "centered"
+        ],
+        "accessibility_notes": [
+          "Must provide enough time to read (4-10s)"
+        ],
+        "implementation_notes": [
+          "SnackBar"
+        ]
+      },
+      {
+        "component_name": "loading_skeleton",
+        "category": "system_feedback",
+        "purpose": [
+          "Indicate loading state with layout preview"
+        ],
+        "visual_hierarchy": "Tertiary",
+        "layout_role": "Placeholder",
+        "shape_token": "matches_target_component",
+        "padding_rule": "none",
+        "sizing_rule": "matches_target_component",
+        "typography_rule": "none",
+        "color_rule": "surface_container",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "none",
+        "interaction_rule": [
+          "None"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "shimmer_effect"
+        ],
+        "forbidden_variants": [
+          "spinning_loaders (for lists)"
+        ],
+        "accessibility_notes": [
+          "Announce 'Loading content...'"
+        ],
+        "implementation_notes": [
+          "Animated shimmer opacity"
+        ]
+      },
+      {
+        "component_name": "inline_loader",
+        "category": "system_feedback",
+        "purpose": [
+          "Show background process in component"
+        ],
+        "visual_hierarchy": "Tertiary",
+        "layout_role": "Feedback indicator",
+        "shape_token": "none",
+        "padding_rule": "xs",
+        "sizing_rule": "24x24dp",
+        "typography_rule": "none",
+        "color_rule": "primary",
+        "border_rule": "none",
+        "elevation_rule": "level0",
+        "icon_rule": "none",
+        "interaction_rule": [
+          "Animated spinning"
+        ],
+        "semantic_dependencies": [
+          "none"
+        ],
+        "allowed_variants": [
+          "circular",
+          "linear"
+        ],
+        "forbidden_variants": [
+          "none"
+        ],
+        "accessibility_notes": [
+          "Live region update 'In progress'"
+        ],
+        "implementation_notes": [
+          "CircularProgressIndicator"
+        ]
+      }
+    ]
+  }
+}
